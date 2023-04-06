@@ -1,7 +1,9 @@
 from random import randint
+import os
 
 
 def cordonne_rota(x, y, lst):
+    global nombre_case
     m = 0
     lst.insert(0, [x, y])
     for size in range(len(lst)):
@@ -22,6 +24,20 @@ def cordonne_rota(x, y, lst):
     return lst
 
 
+def nombre_case(rota_all):
+    m = 0
+
+    corx = 0
+    cory = 0
+
+    for i in range(len(rota_all)):
+        if i == 0:
+            corx = abs(rota_all[0][0] - rota_all[1][0])
+            cory = abs(rota_all[0][1] - rota_all[1][1])
+            nombre_case +=
+    return m
+
+
 def crea_arriere_lst():
     global cor_actu_player_all
     global cor_old_player
@@ -29,6 +45,9 @@ def crea_arriere_lst():
     nombre_de_pas = 0
     #liste des coordonnées de chacuns de memebres du player
     m = []
+    #position dans la liste des coordonnées
+    coorx = 0
+    coory = 0
     #une boucle qui tourne sur le nombre de membres du player
     for nb in range(len(cor_actu_player_all)):
 
@@ -37,21 +56,24 @@ def crea_arriere_lst():
             m.append([cor_actu_player[0], cor_actu_player[1]])
             cor_actu_player_all = [[cor_actu_player[0], cor_actu_player[1]]]
         else:
-            if nb == 0: 
+            if nb == 0:
                 m[0].append(cor_actu_player[0])
-                m[0].append(cor_actu_player[1])   
+                m[0].append(cor_actu_player[1])
                 pass
             else:
+                coorx = cordoné_rota[]
+
                 cor_x = cor_actu_player_all[nb][0]
                 cor_y = cor_actu_player_all[nb][1]
 
-                m[nb].append(cor_actu_player[0])
-                m[nb].append(cor_actu_player[1])
+
 
     return m
 
 
 def affichage(lst):
+    clear = lambda: os.system('cls')
+    clear()
     for i in lst:
         print(i)
     pass
@@ -79,7 +101,7 @@ def show_arriere():
     #afficher le personnage
     for i in range(len(n)):
         m[n[i][0]][n[i][1]] = "x"
-    
+
     #si on est sur la position du coin
     if (cor_actu_player == posi_coin) or (nb_tour < 1):
         size_player += 1
@@ -100,7 +122,7 @@ def show_arriere():
     else:
         m[posi_coin[0]][posi_coin[1]] = "o"
         pass
-    
+
     print("nb tour", nb_tour)
     #affichage de la carte
     affichage(m)
@@ -118,19 +140,19 @@ def posi_player():
     dir = input()
     #si clické sur les lettres pour avancer
     #on retire 1 en x
-    if (dir[0] in "aA"): 
+    if (dir[0] in "aA"):
         new_rota = "aA"
         cor_actu_player[1] -= 1
     #on ajoute 1 en x
-    elif (dir[0] in "dD"): 
+    elif (dir[0] in "dD"):
         new_rota = "dD"
         cor_actu_player[1] += 1
     #on retire 1 en y
-    elif (dir[0] in "zZ"): 
+    elif (dir[0] in "zZ"):
         new_rota = "zZ"
         cor_actu_player[0] -= 1
     #on ajoute 1 en y
-    elif (dir[0] in "sS"): 
+    elif (dir[0] in "sS"):
         new_rota = "sS"
         cor_actu_player[0] += 1
     #on arrête
@@ -163,6 +185,7 @@ elif taille > 20:
     taille = 20
 #coordonné de rotation du player
 cordoné_rota = []
+nombre_case = 0
 #coordonné de toute la chenille
 cor_actu_player_all = [[1, 1]]
 #coordonné de la tête de la chenille
