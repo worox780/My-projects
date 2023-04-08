@@ -26,36 +26,56 @@ def cordonne_rota(x, y, lst):
 
 def nombre_case(rota_all):
     m = 0
-
     corx = 0
     cory = 0
-
     for i in range(len(rota_all)):
+        corx = abs(rota_all[0][0] - rota_all[1][0])
+        cory = abs(rota_all[0][1] - rota_all[1][1])
         if i == 0:
-            corx = abs(rota_all[0][0] - rota_all[1][0])
-            cory = abs(rota_all[0][1] - rota_all[1][1])
-            nombre_case +=
+            if corx == 0: m += cory
+            else: m += corx
+        else:
+            if corx == 0: m += cory
+            else: m += corx
     return m
 
 
 def crea_arriere_lst():
+    #les globals
     global cor_actu_player_all
     global cor_old_player
     #position dans ma taille du player
     nombre_de_pas = 0
+    cor_int_dic = {}
+    nb_actu_size_dic = 0
+    for i in range(len(cordoné_rota)):
+        if i < len(cordoné_rota) - 1:
+            x = cordoné_rota[i] - cordoné_rota[i + 1]
+            y = cordoné_rota[i] - cordoné_rota[i + 1]
+            
+            if x != 0:
+                nb_actu_size_dic += x
+                cor_int_dic[str(nb_actu_size_dic)] = x
+            else:
+                nb_actu_size_dic += y
+                cor_int_dic[str(nb_actu_size_dic)] = y
+
     #liste des coordonnées de chacuns de memebres du player
     m = []
     #position dans la liste des coordonnées
     coorx = 0
     coory = 0
     #une boucle qui tourne sur le nombre de membres du player
-    for nb in range(len(cor_actu_player_all)):
+    for nb in range(size_player):
 
         #si c'est la première rotation
-        if len(cor_actu_player_all) == 1:
+        if size_player == 1:
             m.append([cor_actu_player[0], cor_actu_player[1]])
             cor_actu_player_all = [[cor_actu_player[0], cor_actu_player[1]]]
         else:
+
+            if str(i) <= yyyyyy
+            
             if nb == 0:
                 m[0].append(cor_actu_player[0])
                 m[0].append(cor_actu_player[1])
@@ -63,8 +83,7 @@ def crea_arriere_lst():
             else:
                 coorx = cordoné_rota[]
 
-                cor_x = cor_actu_player_all[nb][0]
-                cor_y = cor_actu_player_all[nb][1]
+                
 
 
 
@@ -83,6 +102,7 @@ def show_arriere():
     global posi_coin
     global size_player
     global cor_actu_player_all
+    nombre_case()
     n = crea_arriere_lst()
     posi = 0
     m = []
@@ -135,6 +155,7 @@ def posi_player():
     global cordoné_rota
     global old_rota
     global new_rota
+    global nombre_case_var
     #nouvelle coordonné
     #diréction
     dir = input()
@@ -166,6 +187,7 @@ def posi_player():
             print("dif")
             print("old cordonné rota : ", cordoné_rota)
             cordoné_rota = cordonne_rota(cor_actu_player[0], cor_actu_player[1], cordoné_rota)
+            nombre_case_var = nombre_case()
             print("new cordonné rota : ", cordoné_rota)
 
         print("cordonné rota : ", cordoné_rota)
@@ -185,7 +207,7 @@ elif taille > 20:
     taille = 20
 #coordonné de rotation du player
 cordoné_rota = []
-nombre_case = 0
+nombre_case_var = 0
 #coordonné de toute la chenille
 cor_actu_player_all = [[1, 1]]
 #coordonné de la tête de la chenille
