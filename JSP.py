@@ -1,98 +1,27 @@
 from random import randint
 import os
-
-
-def cordonne_rota(x, y, lst):
-    global nombre_case
-    m = 0
-    lst.insert(0, [x, y])
-    for size in range(len(lst)):
-        if (size < len(lst) - 1):
-            if lst[size][0] == lst[size + 1][0]:
-                m += abs(lst[size][1] - lst[size - 1][1])
-                if m > size_player:
-                    for i in range(size, len(lst) - 2):
-                        lst.pop(i)
-                    break
-
-            else:
-                m += abs(lst[size][0] - lst[size - 1][0])
-                if m > size_player:
-                    for i in range(size, len(lst) -2):
-                        lst.pop(i)
-                    break
-    return lst
-
-
-def nombre_case(rota_all):
-    m = 0
-    corx = 0
-    cory = 0
-    for i in range(len(rota_all)):
-        corx = abs(rota_all[0][0] - rota_all[1][0])
-        cory = abs(rota_all[0][1] - rota_all[1][1])
-        if i == 0:
-            if corx == 0: m += cory
-            else: m += corx
-        else:
-            if corx == 0: m += cory
-            else: m += corx
-    return m
-
+from time import sleep
 
 def crea_arriere_lst():
     #les globals
-    global cor_actu_player_all
-    global cor_old_player
-    #position dans ma taille du player
-    nombre_de_pas = 0
-    cor_int_dic = {}
-    nb_actu_size_dic = 0
-    for i in range(len(cordoné_rota)):
-        if i < len(cordoné_rota) - 1:
-            x = cordoné_rota[i] - cordoné_rota[i + 1]
-            y = cordoné_rota[i] - cordoné_rota[i + 1]
-            
-            if x != 0:
-                nb_actu_size_dic += x
-                cor_int_dic[str(nb_actu_size_dic)] = x
-            else:
-                nb_actu_size_dic += y
-                cor_int_dic[str(nb_actu_size_dic)] = y
+    global old_size
 
     #liste des coordonnées de chacuns de memebres du player
-    m = []
-    #position dans la liste des coordonnées
-    coorx = 0
-    coory = 0
-    #une boucle qui tourne sur le nombre de membres du player
-    for nb in range(size_player):
-
-        #si c'est la première rotation
-        if size_player == 1:
-            m.append([cor_actu_player[0], cor_actu_player[1]])
-            cor_actu_player_all = [[cor_actu_player[0], cor_actu_player[1]]]
-        else:
-
-            if str(i) <= yyyyyy
-            
-            if nb == 0:
-                m[0].append(cor_actu_player[0])
-                m[0].append(cor_actu_player[1])
-                pass
-            else:
-                coorx = cordoné_rota[]
-
-                
-
-
+    m = cor_actu_player_all
+    
+    #modification du player
+    if old_size == size_player:
+        m.insert(0,cor_actu_player)
+        m.pop(len(cor_actu_player_all) - 1)
+    else:
+        m.insert(0,cor_actu_player)
+        old_size = size_player
 
     return m
 
 
 def affichage(lst):
-    clear = lambda: os.system('cls')
-    clear()
+    os.system('cls')
     for i in lst:
         print(i)
     pass
@@ -102,7 +31,6 @@ def show_arriere():
     global posi_coin
     global size_player
     global cor_actu_player_all
-    nombre_case()
     n = crea_arriere_lst()
     posi = 0
     m = []
@@ -121,11 +49,10 @@ def show_arriere():
     #afficher le personnage
     for i in range(len(n)):
         m[n[i][0]][n[i][1]] = "x"
-
+    
     #si on est sur la position du coin
     if (cor_actu_player == posi_coin) or (nb_tour < 1):
         size_player += 1
-        print("size du player : ", size_player)
         while True:
             posix = randint(0, taille)
             posiy = randint(0, taille)
@@ -137,7 +64,6 @@ def show_arriere():
                 cor_x = cor_actu_player_all[size - 1][0]
                 cor_y = cor_actu_player_all[size - 1][1]
                 #cor_actu_player_all.append([cor_x, cor_y])
-                break
 
     else:
         m[posi_coin[0]][posi_coin[1]] = "o"
@@ -152,28 +78,26 @@ def posi_player():
     #les global
     global play
     global cor_actu_player
-    global cordoné_rota
     global old_rota
     global new_rota
-    global nombre_case_var
     #nouvelle coordonné
     #diréction
     dir = input()
     #si clické sur les lettres pour avancer
     #on retire 1 en x
-    if (dir[0] in "aA"):
+    if (dir[0] in "aA") and new_rota != "dD":
         new_rota = "aA"
         cor_actu_player[1] -= 1
     #on ajoute 1 en x
-    elif (dir[0] in "dD"):
+    elif (dir[0] in "dD") and new_rota != "aA":
         new_rota = "dD"
         cor_actu_player[1] += 1
     #on retire 1 en y
-    elif (dir[0] in "zZ"):
+    elif (dir[0] in "zZ") and new_rota != "sS":
         new_rota = "zZ"
         cor_actu_player[0] -= 1
     #on ajoute 1 en y
-    elif (dir[0] in "sS"):
+    elif (dir[0] in "sS") and new_rota != "zZ":
         new_rota = "sS"
         cor_actu_player[0] += 1
     #on arrête
@@ -182,17 +106,10 @@ def posi_player():
 
     #vérifier qu'il est bien dans la zone de jeu
     if cor_actu_player[0] > 0 and cor_actu_player[0] < taille + 1 and cor_actu_player[1] > 0 and cor_actu_player[1] < taille + 1:
-        #nouvelle coordonné de tête
-        if (new_rota != old_rota) and size_player > 1:
-            print("dif")
-            print("old cordonné rota : ", cordoné_rota)
-            cordoné_rota = cordonne_rota(cor_actu_player[0], cor_actu_player[1], cordoné_rota)
-            nombre_case_var = nombre_case()
-            print("new cordonné rota : ", cordoné_rota)
-
-        print("cordonné rota : ", cordoné_rota)
+        
         #afficher la nouvelle map
         show_arriere()
+    
     #si on est sortie de la grille
     else:
         print("You have loose")
@@ -205,21 +122,17 @@ if taille < 5:
     taille = 5
 elif taille > 20:
     taille = 20
-#coordonné de rotation du player
-cordoné_rota = []
-nombre_case_var = 0
 #coordonné de toute la chenille
 cor_actu_player_all = [[1, 1]]
 #coordonné de la tête de la chenille
 cor_actu_player = [1,1]
-#ancienne coordonné de la tête de la chenille
-cor_old_player = [1,1]
 #ancien coup
 old_rota = "aA"
 #nouveau coup
 new_rota = "aA"
 #taille du player
 size_player = 1
+old_size = 1
 #bool pour l'activation du player
 play = True
 #la position du coin sur la map
@@ -235,5 +148,6 @@ while play == True:
     posi_player()
     print("position de la tête : ", cor_actu_player)
     print("position de tout le corp : ", cor_actu_player_all)
+    print("player size : ", size_player)
     #on rajoute 1 au nombre de tour
     nb_tour += 1
