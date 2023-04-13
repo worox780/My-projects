@@ -1,0 +1,47 @@
+body {
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: rgba(255, 255, 255);
+}
+
+main {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.Title {
+    color: rgb(0, 0, 0);
+}
+
+.bandeau_top {
+    padding:  10px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-size: 1.3em;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.home_bandeau_top {
+    padding: 20px;
+}
+
+.box {
+    border: 3px solid;
+    height: 600px;
+}
+.main_H1 {
+    border: 2px black solid;
+}
+.introduction {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: darkgray;
+}
+.link:hover {
+    color: rgb(199, 199, 199);
+    opacity: 0.8;
+}
