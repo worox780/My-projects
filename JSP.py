@@ -1,32 +1,3 @@
-import calculette
-from random import randint
-taille = int(input("taille de la carte \n"))
-print("size check")
-game = calculette.Game(taille, [randint(1, taille), randint(1, taille)])
-print("upload check")
-play = game.play
-print("play check")
-while play:
-    print("in check")
-    play = game.play
-    print("upload play check")
-    if game.__player_moovement__():
-        print("moovement check")
-        print(game.map_gene)
-        game.__map_generation__()
-        print("gene map check")
-        print(game.map_gene)
-        game.__creation_back__()
-        print(game.map_gene)
-        game.__player_generation__()
-        print(game.map_gene)
-        game.__apple_generation__()
-        print(game.map_gene)
-        game.__Print_plate__()
-    else:
-        print("by pass not good")
-
-
 
 
 """from random import randint
@@ -36,25 +7,27 @@ from time import sleep
 def crea_arriere_lst():
     #les globals
     global old_size
-
     #liste des coordonnées de chacuns de memebres du player
     m = cor_actu_player_all
-    
+    print("new player")
     #modification du player
-    if old_size == size_player:
-        m.insert(0,cor_actu_player)
-        m.pop(len(cor_actu_player_all) - 1)
-    else:
-        m.insert(0,cor_actu_player)
+    x = cor_actu_player[0]
+    y = cor_actu_player[1]
+    if old_size != size_player:
+        m.insert(0,[x, y])
         old_size = size_player
-
+    else:
+        m.insert(0,[x, y])
+        m.pop(len(cor_actu_player_all) - 1)
     return m
 
 
 def affichage(lst):
     os.system('cls')
-    for i in lst:
-        print(i)
+    for i in range(taille + 2):
+        for ii in range(taille + 2):
+            print(lst[i][ii], end=" ")
+        print()
     pass
 
 
@@ -62,8 +35,9 @@ def show_arriere():
     global posi_coin
     global size_player
     global cor_actu_player_all
-    n = crea_arriere_lst()
+    
     posi = 0
+    
     m = []
 
     for x in range(taille + 2):
@@ -76,14 +50,14 @@ def show_arriere():
                     m[x].append("/")
                 else:
                     m[x].append("-")
-
-    #afficher le personnage
-    for i in range(len(n)):
-        m[n[i][0]][n[i][1]] = "x"
-    
-    #si on est sur la position du coin
     if (cor_actu_player == posi_coin) or (nb_tour < 1):
         size_player += 1
+    n = crea_arriere_lst()
+    for i in range(len(n)):
+        m[n[i][0]][n[i][1]] = "x"
+    if size_player == taille ** 2:
+        end_msg(True)
+    elif (cor_actu_player == posi_coin) or (nb_tour < 1):
         while True:
             posix = randint(0, taille)
             posiy = randint(0, taille)
@@ -95,25 +69,32 @@ def show_arriere():
                 cor_x = cor_actu_player_all[size - 1][0]
                 cor_y = cor_actu_player_all[size - 1][1]
                 #cor_actu_player_all.append([cor_x, cor_y])
-
+                break
     else:
         m[posi_coin[0]][posi_coin[1]] = "o"
-        pass
-
-    print("nb tour", nb_tour)
     #affichage de la carte
     affichage(m)
 
 
+def end_msg(can):
+    global play
+    play = False
+    if can:
+        print(f"GG, you have win in {nb_tour} rouds")
+    else:
+        print(f"You have loose in {nb_tour} rouds a snake's size {size_player}")
+
+
 def posi_player():
     #les global
-    global play
     global cor_actu_player
     global old_rota
     global new_rota
     #nouvelle coordonné
     #diréction
     dir = input()
+    if dir == "":
+        dir = new_rota
     #si clické sur les lettres pour avancer
     #on retire 1 en x
     if (dir[0] in "aA") and new_rota != "dD":
@@ -132,8 +113,12 @@ def posi_player():
         new_rota = "sS"
         cor_actu_player[0] += 1
     #on arrête
-    else: play = False
-
+    else:
+        end_msg(False)
+    
+    for i in cor_actu_player_all:
+        if cor_actu_player == i:
+            end_msg(False)
 
     #vérifier qu'il est bien dans la zone de jeu
     if cor_actu_player[0] > 0 and cor_actu_player[0] < taille + 1 and cor_actu_player[1] > 0 and cor_actu_player[1] < taille + 1:
@@ -143,8 +128,7 @@ def posi_player():
     
     #si on est sortie de la grille
     else:
-        print("You have loose")
-        play = False
+        end_msg(False)
 
 
 #taille de la carte
@@ -177,9 +161,6 @@ show_arriere()
 while play == True:
     #faire l'appel de la fonction pour le déplacement
     posi_player()
-    print("position de la tête : ", cor_actu_player)
-    print("position de tout le corp : ", cor_actu_player_all)
-    print("player size : ", size_player)
     #on rajoute 1 au nombre de tour
     nb_tour += 1
 """
