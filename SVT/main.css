@@ -1,47 +1,102 @@
 body {
     padding-left: 2%;
     padding-right: 2%;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-main {
-    padding-top: 2%;
-    padding-bottom: 2%;
+
+h2 {
+    text-align: justify;
 }
 
-.Title {
-    color: rgb(0, 0, 0);
+header {
+    background-color: antiquewhite;
 }
 
-.bandeau_top {
-    padding:  10px;
-    background-color: rgb(34, 34, 34);
-    color: white;
-    font-size: 1.3em;
+a:hover {
+    opacity: 0.8;
+    text-decoration: underline white;
 }
 
-.link {
-    color: white;
-    text-decoration: none;
-}
-
-.home_bandeau_top {
-    padding: 20px;
-}
-
-.box {
-    border: 3px solid;
-    height: 600px;
-}
-.main_H1 {
-    border: 2px black solid;
-}
-.introduction {
+.main_page {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 1%;
+  }
+  
+  .right_main {
+    right: 100%;
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 40% 60%;
-    background-color: darkgray;
-}
-.link:hover {
-    color: rgb(199, 199, 199);
-    opacity: 0.8;
-}
+    border-radius: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.500);
+  }
+
+  .left_hide {
+    height: 100%;
+  }
+
+  .left_main {
+    position: fixed;
+    top: 25%;
+    background-color: #ffffff;
+    height: 300px;
+    border-radius: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.500);
+  }
+
+.menu {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000ce;
+  }
+  
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    background-color: antiquewhite;
+    border: 3px solid rgb(0, 0, 0);
+  }
+  
+  .menu li:hover ul {
+    display: block;
+  }
+
+  .menu ul li {
+    display: block;
+  }
+  
+  .menu ul a {
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+  
+  .menu ul ul {
+    top: 0;
+    left: 100%;
+  }
+  
+  .menu ul ul a {
+    padding-left: 20px;
+  }
+  
+  
