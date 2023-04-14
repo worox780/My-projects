@@ -1,185 +1,102 @@
-import calculette
 from random import randint
-taille = int(input("taille de la carte \n"))
-print("size check")
-game = calculette.Game(taille, [randint(1, taille), randint(1, taille)])
-print("upload check")
-play = game.play
-print("play check")
-while play:
-    print("in check")
-    play = game.play
-    print("upload play check")
-    if game.__player_moovement__():
-        print("moovement check")
-        print(game.map_gene)
-        game.__map_generation__()
-        print("gene map check")
-        print(game.map_gene)
-        game.__creation_back__()
-        print(game.map_gene)
-        game.__player_generation__()
-        print(game.map_gene)
-        game.__apple_generation__()
-        print(game.map_gene)
-        game.__Print_plate__()
-    else:
-        print("by pass not good")
-
-
-
-
-"""from random import randint
 import os
-from time import sleep
-
-def crea_arriere_lst():
-    #les globals
-    global old_size
-
-    #liste des coordonnées de chacuns de memebres du player
-    m = cor_actu_player_all
-    
-    #modification du player
-    if old_size == size_player:
-        m.insert(0,cor_actu_player)
-        m.pop(len(cor_actu_player_all) - 1)
-    else:
-        m.insert(0,cor_actu_player)
-        old_size = size_player
-
-    return m
 
 
-def affichage(lst):
-    os.system('cls')
-    for i in lst:
-        print(i)
-    pass
-
-
-def show_arriere():
-    global posi_coin
-    global size_player
-    global cor_actu_player_all
-    n = crea_arriere_lst()
-    posi = 0
-    m = []
-
-    for x in range(taille + 2):
-        m.append([])
-        for y in range(taille + 2):
-            if x == 0 or x == taille + 1:
-                m[x].append("/")
-            else:
-                if y == 0 or y == taille + 1:
-                    m[x].append("/")
+class Game:
+    def __init__(self, plate_size: int, position_apple: list) -> None:
+        self.plate_size = plate_size + 2
+        self.position_apple = position_apple
+        self.position_head_player = [1, 1]
+        self.position_player = [[1, 1]]
+        self.new_direction = ""
+        self.old_player_size = 1
+        self.new_player_size = 1
+        self.tour_count = 0
+        self.play = True 
+        self.map_gene = []
+    #get the new coordonates of the snke head, and check if your are not out of the plate.
+    def __player_moovement__(self) -> bool:
+        dir = input()
+        if dir == "":
+            dir = self.new_direction
+        if (dir[0] in "aA"):
+            self.new_direction = "aA"
+            self.position_head_player[1] -= 1
+        elif (dir[0] in "d"):
+            self.new_direction = "dD"
+            self.position_head_player[1] += 1
+        elif (dir[0] in "zZ"):
+            self.old_direction = "zZ"
+            self.position_head_player[0] -= 1
+        elif (dir[0] in "sS"):
+            self.old_direction = "sS"
+            self.position_head_player[0] += 1
+        else: Game.__end_message__(self, False)
+        if Game.__check_player_can_moov__(self):
+            return True
+    #check if the player can moov with his position head, and if it can, moov the player.
+    def __check_player_can_moov__(self):
+        for position_part in self.position_player:
+            if self.position_head_player == position_part:
+                Game.__end_message__(self, False)
+        if len(self.position_player) == (self.plate_size - 2) ** 2:
+            Game.__end_message__(self, True)
+        if self.position_head_player[0] > 0 and self.position_head_player[0] < self.plate_size and self.position_head_player[1] > 0 and self.position_head_player[1] < self.plate_size:
+            return True
+        else: Game.__end_message__(self, False)
+    #create the map
+    def __map_generation__(self) -> None:
+        self.map_gene = []
+        for x in range(self.plate_size):
+            self.map_gene.append([])
+            for y in range(self.plate_size):
+                if (x == 0) or (x == self.plate_size - 1):
+                    self.map_gene[x].append("/")
                 else:
-                    m[x].append("-")
-
-    #afficher le personnage
-    for i in range(len(n)):
-        m[n[i][0]][n[i][1]] = "x"
-    
-    #si on est sur la position du coin
-    if (cor_actu_player == posi_coin) or (nb_tour < 1):
-        size_player += 1
-        while True:
-            posix = randint(0, taille)
-            posiy = randint(0, taille)
-
-            if m[posix][posiy] == "-":
-                m[posix][posiy] = "o"
-                posi_coin = [posix, posiy]
-                size = len(cor_actu_player_all)
-                cor_x = cor_actu_player_all[size - 1][0]
-                cor_y = cor_actu_player_all[size - 1][1]
-                #cor_actu_player_all.append([cor_x, cor_y])
-
-    else:
-        m[posi_coin[0]][posi_coin[1]] = "o"
-        pass
-
-    print("nb tour", nb_tour)
-    #affichage de la carte
-    affichage(m)
-
-
-def posi_player():
-    #les global
-    global play
-    global cor_actu_player
-    global old_rota
-    global new_rota
-    #nouvelle coordonné
-    #diréction
-    dir = input()
-    #si clické sur les lettres pour avancer
-    #on retire 1 en x
-    if (dir[0] in "aA") and new_rota != "dD":
-        new_rota = "aA"
-        cor_actu_player[1] -= 1
-    #on ajoute 1 en x
-    elif (dir[0] in "dD") and new_rota != "aA":
-        new_rota = "dD"
-        cor_actu_player[1] += 1
-    #on retire 1 en y
-    elif (dir[0] in "zZ") and new_rota != "sS":
-        new_rota = "zZ"
-        cor_actu_player[0] -= 1
-    #on ajoute 1 en y
-    elif (dir[0] in "sS") and new_rota != "zZ":
-        new_rota = "sS"
-        cor_actu_player[0] += 1
-    #on arrête
-    else: play = False
-
-
-    #vérifier qu'il est bien dans la zone de jeu
-    if cor_actu_player[0] > 0 and cor_actu_player[0] < taille + 1 and cor_actu_player[1] > 0 and cor_actu_player[1] < taille + 1:
-        
-        #afficher la nouvelle map
-        show_arriere()
-    
-    #si on est sortie de la grille
-    else:
-        print("You have loose")
-        play = False
-
-
-#taille de la carte
-taille = int(input())
-if taille < 5:
-    taille = 5
-elif taille > 20:
-    taille = 20
-#coordonné de toute la chenille
-cor_actu_player_all = [[1, 1]]
-#coordonné de la tête de la chenille
-cor_actu_player = [1,1]
-#ancien coup
-old_rota = "aA"
-#nouveau coup
-new_rota = "aA"
-#taille du player
-size_player = 1
-old_size = 1
-#bool pour l'activation du player
-play = True
-#la position du coin sur la map
-posi_coin = [randint(2, taille), randint(2, taille)]
-#le nombre de tour
-nb_tour = 1
-#faire une génération de la map
-show_arriere()
-
-
-while play == True:
-    #faire l'appel de la fonction pour le déplacement
-    posi_player()
-    print("position de la tête : ", cor_actu_player)
-    print("position de tout le corp : ", cor_actu_player_all)
-    print("player size : ", size_player)
-    #on rajoute 1 au nombre de tour
-    nb_tour += 1
-"""
+                    if (y == 0) or (y == self.plate_size - 1):
+                        self.map_gene[x].append("/")
+                    else:
+                        self.map_gene[x].append("-")
+    #create the body on the map
+    def __player_generation__(self) -> None:
+        Game.__creation_back__(self)
+        for i in range(len(self.position_player)):
+            self.map_gene[self.position_player[i][0]][self.position_player[i][1]] = "x"
+    #create the coordonates of the snake.
+    def __creation_back__(self) -> None:
+        x = self.position_head_player[0]
+        y = self.position_head_player[1]
+        if self.new_player_size == self.old_player_size:
+            self.position_player.insert(0,[x, y])
+            self.position_player.pop(len(self.position_player) - 1)
+        else:
+            self.position_player.insert(0,[x, y])
+            self.old_player_size = self.new_player_size
+    #add the apple on the plate and chech if the apple to position isn't on the snake body
+    def __apple_generation__(self) -> list:
+        if (self.position_head_player == self.position_apple) or (self.tour_count < 1):
+            self.new_player_size += 1
+            while True:
+                x = randint(1, self.plate_size - 2)
+                y = randint(1, self.plate_size - 2)
+                if self.map_gene[x][y] == "-":
+                    self.map_gene[x][y] = "o"
+                    self.position_apple = [x, y]
+                    break
+        else:
+            self.map_gene[self.position_apple[0]][self.position_apple[1]] = "o"
+    #print the plate. It can see if you win with head position or body size.
+    def __Print_plate__(self) -> None:
+        #os.system('cls')
+        self.tour_count += 1
+        for x in range(self.plate_size):
+            for y in range(self.plate_size):
+                print(self.map_gene[x][y], end=" ")   
+            print()
+    #print the message when you win or loss.
+    def __end_message__(self, cause: bool) -> None:
+        self.play = False
+        if cause:
+            print(f"GG, you have win in {self.tour_count} rouds")
+        else:
+            print(f"You have loose in {self.tour_count} rouds a snake's size {round(len(self.position_player) / 2)}")
