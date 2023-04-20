@@ -2,7 +2,7 @@ from random import randint
 import os
 
 
-class Game:
+class Snake:
     def __init__(self, plate_size: int, position_apple: list) -> None:
         self.plate_size = plate_size + 2
         self.position_apple = position_apple
@@ -31,19 +31,19 @@ class Game:
         elif (dir[0] in "sS"):
             self.old_direction = "sS"
             self.position_head_player[0] += 1
-        else: Game.__end_message__(self, False)
-        if Game.__check_player_can_moov__(self):
+        else: Snake.__end_message__(self, False)
+        if Snake.__check_player_can_moov__(self):
             return True
     #check if the player can moov with his position head, and if it can, moov the player.
     def __check_player_can_moov__(self):
         for position_part in self.position_player:
             if self.position_head_player == position_part:
-                Game.__end_message__(self, False)
+                Snake.__end_message__(self, False)
         if len(self.position_player) == (self.plate_size - 2) ** 2:
-            Game.__end_message__(self, True)
+            Snake.__end_message__(self, True)
         if self.position_head_player[0] > 0 and self.position_head_player[0] < self.plate_size and self.position_head_player[1] > 0 and self.position_head_player[1] < self.plate_size:
             return True
-        else: Game.__end_message__(self, False)
+        else: Snake.__end_message__(self, False)
     #create the map
     def __map_generation__(self) -> None:
         self.map_gene = []
@@ -59,7 +59,7 @@ class Game:
                         self.map_gene[x].append("-")
     #create the body on the map
     def __player_generation__(self) -> None:
-        Game.__creation_back__(self)
+        Snake.__creation_back__(self)
         for i in range(len(self.position_player)):
             self.map_gene[self.position_player[i][0]][self.position_player[i][1]] = "x"
     #create the coordonates of the snake.

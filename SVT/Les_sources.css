@@ -35,9 +35,7 @@ lien de la page mis en valeur
 Partie de droite
 */
 .main_page {
-  margin-top: -520px;
     display: grid;
-    margin-left: 21%;
     grid-template-columns: 49.5% 49.5%;
     grid-template-rows: 300px 300px 300px;
     grid-gap: 1%;
