@@ -2,6 +2,9 @@ body {
   background-color: #1b9be6;
   margin: 0px;
 }
+H1 {
+  font-size: 3em;
+}
 h2 {
   text-align: justify;
   font-size: 2.5em;
@@ -78,14 +81,9 @@ Partie de droite
 .title_part {
   border-top: solid;
 }
-
-#img_pr {
-  height: 100%;
-  width: auto;
-}
-#img_sec {
-  height: 100%;
-  width: auto;
+.title_sous_part {
+  width: 50%;
+  border-top: solid;
 }
 
 .hover-underline-animation {
@@ -226,10 +224,9 @@ Bandeau de navigation
 #title_header {
   position: absolute;
   right: 1%;
-  top: 25px;
+  top: 50px;
   transform: translateY(-50%);
 }
-
 #pr_img {
   width: 100%;
   height: auto;
@@ -281,15 +278,15 @@ Bandeau de navigation
     grid-gap: 1%;
     margin-bottom: 50px;
   }
-  #title_header {
-    position: relative;
-    left: 5px;
-  }
+  
   h2 {
     font-size: 1.6em;
   }
   h3 {
     font-size: 1.4em;
+  }
+  H1 {
+    font-size: 2em;
   }
   }
 
@@ -300,5 +297,9 @@ Bandeau de navigation
   main {
     display: grid;
     grid-template-columns: 100%;
+  }
+  #title_header {
+    position: relative;
+    left: 5px;
   }
 }
