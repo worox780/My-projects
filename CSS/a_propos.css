@@ -301,5 +301,7 @@ Bandeau de navigation
   #title_header {
     position: relative;
     left: 5px;
+    width: auto;
+    height: 100%;
   }
 }

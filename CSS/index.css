@@ -1,6 +1,7 @@
 body {
   background-color: #1b9be6;
-  margin: 0px;
+  margin: 0px 5px 0px 5px;
+
 }
 H1 {
   font-size: 3em;
@@ -278,7 +279,6 @@ Bandeau de navigation
     grid-gap: 1%;
     margin-bottom: 50px;
   }
-  
   h2 {
     font-size: 1.6em;
   }
@@ -288,9 +288,23 @@ Bandeau de navigation
   H1 {
     font-size: 2em;
   }
+  #title_header {
+    position: relative;
+    top: 15px;
+    left: 5px;
+    width: 80%;
+    height: auto;
+  }
+  #left_main {
+    display: none;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+  }
   }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 500px){
   #left_main {
     display: none;
   }
@@ -301,5 +315,7 @@ Bandeau de navigation
   #title_header {
     position: relative;
     left: 5px;
+    width: 400px;
+    height: auto;
   }
 }
