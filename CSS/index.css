@@ -21,12 +21,7 @@ nav {
   padding-bottom: 10px;
   background-color: #ffffff;
 }
-footer {
-  margin-top: 0px;
-  height: 50px;
-  background-color: #000000;
-  color: white;
-}
+
 
 h1 {
   font-size: 3em;
@@ -146,21 +141,24 @@ Bandeau qui se déplace sur la gauche
 }
 
 .higlite {
+  z-index: 1;
   position: relative;
 }
 
-.higlite::before {
+.higlite::after {
+  z-index: 0;
   content: "";
   position: absolute;
   left: 0;
   width: 0;
-  height: 22px;
-  background-color: rgba(255, 255, 0, 0.103);
+  top: 20px;
+  height: 4px;
+  background-color: rgb(255, 0, 0);
   transition: width 0.5s ease-in-out;
 }
 
 /* Animation */
-#info_imp_left:hover ~ p .higlite::before {
+#info_imp_left:hover ~ p .higlite::after {
   width: 100%;
 }
 
@@ -217,13 +215,38 @@ Bandeau de navigation
 #inpt-1957 {
   background-color: white;
 }
-#txt-1957 {
+.txt-1957 {
+  position: relative;
   width: auto;
   padding: 2px;
-  background-color: #0C4A7C;
+  margin-bottom: 5px;
   display: none;
-  transition: opacity 400ms ease-in-out;
+  background-color: #0C4A7C;
+  transition: 1ms ease-in-out;
 }
+.empti {
+  padding: 25px;
+}
+.txt-1960 {
+  position: relative;
+  width: auto;
+  padding: 2px;
+  margin-bottom: 5px;
+  display: none;
+  background-color: #0C4A7C;
+  transition: 1ms ease-in-out;
+}
+.visibleR {
+  display: block;
+  animation-name: translateR;
+  animation-duration: 2s;
+}
+.visibleG {
+  display: block;
+  animation-name: translateG;
+  animation-duration: 2s;
+}
+/*
 #inpt-1957:checked ~ #txt-1957{
   opacity: 0;
   display: block;
@@ -234,6 +257,24 @@ Bandeau de navigation
 #inpt-1957:not(checked) ~ #txt-1957{
   display: none;
 }
+*/
+@keyframes translateG {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes translateR {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 
 @keyframes show {
   from {
@@ -343,3 +384,21 @@ Bandeau de navigation
   }
 }
 
+@media screen and (max-width: 1000px) {
+  footer {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    margin-top: 20px;
+    padding-bottom: 40px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+  }
+}
