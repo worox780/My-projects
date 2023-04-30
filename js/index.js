@@ -38,24 +38,25 @@ tooltipContainer.addEventListener('mouseout', () => {
 
 
 
-
+var posi = 0;
+if (window.screen.width >)
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
   var monElement1 = document.getElementById('txt-1957');
   var empti1 = this.document.getElementById('empti1');
   var empti2 = this.document.getElementById('empti2');
   var monElement2 = document.getElementById('txt-1960');
-  var empti3 = this.document.getElementById('empti1');
-  var empti4 = this.document.getElementById('empti2');
+  var empti3 = this.document.getElementById('empti3');
+  var empti4 = this.document.getElementById('empti4');
   var monElement3 = document.getElementById('txt-1967');
-  var empti5 = this.document.getElementById('empti1');
-  var empti6 = this.document.getElementById('empti2');
+  var empti5 = this.document.getElementById('empti5');
+  var empti6 = this.document.getElementById('empti6');
   var monElement4 = document.getElementById('txt-1974');
-  var empti7 = this.document.getElementById('empti1');
-  var empti8 = this.document.getElementById('empti2');
+  var empti7 = this.document.getElementById('empti7');
+  var empti8 = this.document.getElementById('empti8');
   var monElement5 = document.getElementById('txt-1999');
 
-  if (scrollPosition > 1450) {
+  if (scrollPosition > 1300) {
     // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
     monElement1.classList.add('visibleR');
     empti1.classList.add('empti')
@@ -87,7 +88,7 @@ window.addEventListener('scroll', function() {
     monElement3.classList.remove('visibleR');
     empti5.classList.remove('empti')
   }
-  if (scrollPosition > 2300) {
+  if (scrollPosition > 2400) {
     // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
     empti6.classList.add('empti')
     monElement4.classList.add('visibleG');
@@ -98,7 +99,7 @@ window.addEventListener('scroll', function() {
     monElement4.classList.remove('visibleG');
     empti7.classList.remove('empti')
   }
-  if (scrollPosition > 2600) {
+  if (scrollPosition > 2500) {
     // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
     empti8.classList.add('empti')
     monElement5.classList.add('visibleR');

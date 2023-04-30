@@ -212,12 +212,12 @@ Bandeau de navigation
   padding-left: 20px;
 }
 
-#inpt-1957 {
-  background-color: white;
-}
+
+
+
 .txt-1957 {
   position: relative;
-  width: auto;
+  width: 50%;
   padding: 2px;
   margin-bottom: 5px;
   display: none;
@@ -229,7 +229,34 @@ Bandeau de navigation
 }
 .txt-1960 {
   position: relative;
-  width: auto;
+  width: 50%;
+  padding: 2px;
+  margin-bottom: 5px;
+  display: none;
+  background-color: #0C4A7C;
+  transition: 1ms ease-in-out;
+}
+.txt-1967 {
+  position: relative;
+  width: 50%;
+  padding: 2px;
+  margin-bottom: 5px;
+  display: none;
+  background-color: #0C4A7C;
+  transition: 1ms ease-in-out;
+}
+.txt-1974 {
+  position: relative;
+  width: 50%;
+  padding: 2px;
+  margin-bottom: 5px;
+  display: none;
+  background-color: #0C4A7C;
+  transition: 1ms ease-in-out;
+}
+.txt-1999 {
+  position: relative;
+  width: 50%;
   padding: 2px;
   margin-bottom: 5px;
   display: none;
@@ -263,7 +290,7 @@ Bandeau de navigation
     transform: translateX(-100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateX();
   }
 }
 @keyframes translateR {
@@ -366,6 +393,9 @@ Bandeau de navigation
     display: grid;
     grid-template-columns: 100%;
   }
+  .date {
+    font-size: 1.2em;
+  }
   }
 
 @media screen and (max-width: 900px) and (min-width: 500px){
@@ -382,6 +412,9 @@ Bandeau de navigation
     width: 400px;
     height: auto;
   }
+  .date {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -390,6 +423,9 @@ Bandeau de navigation
     height: 50px;
     background-color: #000000;
     color: white;
+  }
+  .date {
+    font-size: 1.8em;
   }
 }
 
@@ -400,5 +436,8 @@ Bandeau de navigation
     height: 50px;
     background-color: #000000;
     color: white;
+  }
+  .date {
+    font-size: 2em;
   }
 }
