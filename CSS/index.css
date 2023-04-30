@@ -132,6 +132,7 @@ Bandeau qui se déplace sur la gauche
 */
 
 #left_main {
+  z-index: 1;
   position: sticky;
   top: 100px;
   height: 500px;
@@ -266,12 +267,12 @@ Bandeau de navigation
 .visibleR {
   display: block;
   animation-name: translateR;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 .visibleG {
   display: block;
   animation-name: translateG;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 /*
 #inpt-1957:checked ~ #txt-1957{
