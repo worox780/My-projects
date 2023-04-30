@@ -1,6 +1,4 @@
-
-
-"""from random import randint
+from random import randint
 import os
 from time import sleep
 
@@ -163,4 +161,3 @@ while play == True:
     posi_player()
     #on rajoute 1 au nombre de tour
     nb_tour += 1
-"""
