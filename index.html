@@ -10,24 +10,67 @@
 </head>
 
 <body>
-    <header>
-        <ul class="menu">
-            <li><a class="a-most-imp" href="index.html">Accueil</a></li>
-            <li>
-                <a href="html/contraception.html">Moyens de contraceptions</a>
-                <ul>
-                    <li><a href="html/contraception1.html">Contraception 1</a></li>
-                    <li><a href="html/contraception2.html">Contraception 2</a></li>
-                </ul>
-            </li>
-            <li><a href="html/Les_sources.html">Les sources</a></li>
-            <li><a href="html/a_propos.html">A propos</a></li>
-        </ul>
-        <img id="title_header" src="img/logo.png.jpg" alt="">
-    </header>
-
-    <nav>
-        <H1>Tout savoir sur la contraception</H1>
+    <nav class="navbar">
+        <div class="dropdowns">
+            <div class="dropdown">
+                <div id="Acceuil" >
+                    <a href="index.html" class="button">Acceuil <img src="img/chevron.svg" /></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#Qu-est-ce-que-la-contraception" class="button-in">Qu'est ce que la contraception</a>
+                        <a href="index.html#L-histoire-de-la-contraception" class="button-in">L'histoire de la contraception</a>
+                        <a href="index.html#L-histoire-de-la-contracepetion-en-France" class="button-in">L'histoire de la contracepetion en France</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div id="contracepetion">
+                    <a href="html/contraception.html" class="button">Moyens de contracepetions <img src="img/chevron.svg" /></a>
+                    <div class="dropdown-menu">
+                        <div class="dropleft">
+                            <a href="html/contraception1.html" class="button-in">Contraception hormonal régulière <img src="img/chevron.svg" /></a>
+                            <div class="dropleft-menu">
+                                <a href="html/contraception1.html#ancre1" class="button-in">Ancre1</a>
+                                <a href="html/contraception1.html#ancre2" class="button-in">Ancre2</a>
+                                <a href="html/contraception1.html#ancre3" class="button-in">Ancre3</a>
+                            </div>
+                        </div>
+                        <div class="dropleft">
+                            <a href="html/contraception2.html" class="button-in">Contraception hormonal d'urgence <img src="img/chevron.svg" /></a>
+                            <div class="dropleft-menu">
+                                <a href="html/contraception2.html#ancre1" class="button-in">Ancre1</a>
+                                <a href="html/contraception2.html#ancre2" class="button-in">Ancre2</a>
+                                <a href="html/contraception2.html#ancre3" class="button-in">Ancre3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="sources" class="button">
+                    <a href="html/Les_sources.html">Les sources</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div id="propos">
+                    <a href="html/a_propos.html" class="button">A propos <img src="img/chevron.svg" /></a>
+                    <div class="dropdown-menu">
+                        <a href="html/a_propos.html#Arnav-Surana" class="button-in">Arnav Surana</a>
+                        <a href="html/a_propos.html#Louis-Verite" class="button-in">Louis Verite</a>
+                        <a href="html/a_propos.html#ancre1" class="button-in">Ancere 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div id="Contact">
+                    <a href="html/Contacte.html" class="button">Comment nous contacter <img src="img/chevron.svg" /></a>
+                    <div class="dropdown-menu">
+                        <a href="html/Contacte.html#email" class="button-in">Email</a>
+                        <a href="html/Contacte.html#telephone" class="button-in">Telephone</a>
+                        <a href="html/Contacte.html#Adresse" class="button-in">Adresse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <main>
@@ -39,7 +82,7 @@
         </section>
         <section>
             <H1>Introduction</H1>
-            <H2 class="title-part">Qu'est ce que la contraception</H2>
+            <H2 class="title-part" id="Qu-est-ce-que-la-contraception">Qu'est ce que la contraception</H2>
 
             <div class="part">
                 <div class="right-first-main">
@@ -67,7 +110,7 @@
                 
             </div>
 
-            <h2 class="title-part">L'histoire de la contraception</h2>
+            <h2 class="title-part" id="L-histoire-de-la-contraception">L'histoire de la contraception</h2>
             <h3 class="title-sous-part">Les origines de la contracepetion</h3>
             <div>
                 <div class="part">
@@ -102,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="title-part">L'histoire de la contracepetion en France</h2>
+            <h2 class="title-part" id="L-histoire-de-la-contracepetion-en-France">L'histoire de la contracepetion en France</h2>
             <div class="part_chr">
                 
                 <div id="txt-1957" class="txt-1957">
