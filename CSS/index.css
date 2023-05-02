@@ -1,5 +1,9 @@
 /*
 Le nav
+
+* {
+  border: red solid 2px;
+}
 */
 
 body {
@@ -17,15 +21,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  height: 72px;
+  height: 100px;
   background: rgba(0, 0, 0, 0.9);
   color: #f9f9f9;
+}
+.barre {
+  border: #3d3d3d solid 1px;
+  height: 60px;
+  top: 6px;
 }
 .button {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 13px 24px;
+  padding: 13px 10px;
   height: 100%;
   opacity: 0.6;
 }
@@ -256,6 +265,39 @@ Bandeau qui se déplace sur la gauche
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+#ph1 {
+  font-weight: 400;
+  transition: font-size 1s ease-in-out, color 1s ease-in-out;
+}
+#ph1.grow {
+  font-size: 1.15em;
+  color: rgb(70, 17, 17);
+}
+#ph2 {
+  font-weight: 400;
+  transition: font-size 1s ease-in-out, color 1s ease-in-out;
+}
+#ph2.grow {
+  font-size: 1.15em;
+  color: rgb(70, 17, 17);
+}
+#ph3 {
+  font-weight: 400;
+  transition: font-size 1s ease-in-out, color 1s ease-in-out;
+}
+#ph3.grow {
+  font-size: 1.15em;
+  color: rgb(70, 17, 17);
+}
+#ph4 {
+  font-weight: 400;
+  transition: font-size 1s ease-in-out, color 1s ease-in-out;
+}
+#ph4.grow {
+  font-size: 1.15em;
+  color: rgb(70, 17, 17);
+}
+
 
 .higlite {
   z-index: 1;
@@ -337,12 +379,12 @@ Bandeau de navigation
 .visibleR {
   display: block;
   animation-name: translateR;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 .visibleG {
   display: block;
   animation-name: translateG;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 /*
 #inpt-1957:checked ~ #txt-1957{

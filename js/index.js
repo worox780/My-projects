@@ -47,80 +47,114 @@ if (window.screen.width > 1500) {
 if (window.screen.width > 1000) {
   posi = 1000;
 }
-if (window.screen.width > 900) {
-  posi = 900;
+if (window.screen.width > 700) {
+  posi = 700;
 }
-if (window.screen.width > 900) {
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var monElement1 = document.getElementById('txt-1957');
-    var empti1 = this.document.getElementById('empti1');
-    var empti2 = this.document.getElementById('empti2');
-    var monElement2 = document.getElementById('txt-1960');
-    var empti3 = this.document.getElementById('empti3');
-    var empti4 = this.document.getElementById('empti4');
-    var monElement3 = document.getElementById('txt-1967');
-    var empti5 = this.document.getElementById('empti5');
-    var empti6 = this.document.getElementById('empti6');
-    var monElement4 = document.getElementById('txt-1974');
-    var empti7 = this.document.getElementById('empti7');
-    var empti8 = this.document.getElementById('empti8');
-    var monElement5 = document.getElementById('txt-1999');
-  
-    if (scrollPosition > posi) {
+if (window.screen.width > 500) {
+  posi = 500;
+}
+if (window.screen.width > 300) {
+  posi = 300;
+}
+else {
+  posi = 150;
+}
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop) {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
-      monElement1.classList.add('visibleR');
-      empti1.classList.add('empti')
+      document.getElementById('txt-1957').classList.add('visibleR');
+      document.getElementById('empti1').classList.add('empti')
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 250 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 400) {
+          this.document.getElementById("ph1").classList.add("grow")
+      }
+        else {
+          this.document.getElementById("ph1").classList.remove("grow")
+        }
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 400 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 550) {
+          this.document.getElementById("ph2").classList.add("grow")
+      }
+        else {
+          this.document.getElementById("ph2").classList.remove("grow")
+        }
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 550 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 700) {
+          this.document.getElementById("ph3").classList.add("grow")
+      }
+        else {
+          this.document.getElementById("ph3").classList.remove("grow")
+        }
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 700 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 850) {
+          this.document.getElementById("ph4").classList.add("grow")
+      }
+        else {
+          this.document.getElementById("ph4").classList.remove("grow")
+        }
     } else {
       // Supprimer la classe visible lorsque la fenêtre de l'utilisateur est à moins de 500 pixels du haut de la page
-      empti1.classList.remove('empti')
-      monElement1.classList.remove('visibleR');
+      document.getElementById('empti1').classList.remove('empti')
+      document.getElementById('txt-1957').classList.remove('visibleR');
     }
   
-    if (scrollPosition > posi + 450) {
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1960').offsetTop) {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
-      empti2.classList.add('empti')
-      monElement2.classList.add('visibleG');
-      empti3.classList.add('empti')
+      this.document.getElementById('empti2').classList.add('empti')
+      document.getElementById('txt-1960').classList.add('visibleG');
+      this.document.getElementById('empti3').classList.add('empti') 
+      
     } else {
       // Supprimer la classe visible lorsque la fenêtre de l'utilisateur est à moins de 500 pixels du haut de la page
-      empti2.classList.remove('empti')
-      monElement2.classList.remove('visibleG');
-      empti3.classList.remove('empti')
+      this.document.getElementById('empti2').classList.remove('empti')
+      document.getElementById('txt-1960').classList.remove('visibleG');
+      this.document.getElementById('empti3').classList.remove('empti')
     }
-    if (scrollPosition > posi + 900) {
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1967').offsetTop) {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
-      empti4.classList.add('empti')
-      monElement3.classList.add('visibleR');
-      empti5.classList.add('empti')
+      this.document.getElementById('empti4').classList.add('empti')
+      document.getElementById('txt-1967').classList.add('visibleR');
+      this.document.getElementById('empti5').classList.add('empti')
     } else {
       // Supprimer la classe visible lorsque la fenêtre de l'utilisateur est à moins de 500 pixels du haut de la page
-      empti4.classList.remove('empti')
-      monElement3.classList.remove('visibleR');
-      empti5.classList.remove('empti')
+      this.document.getElementById('empti4').classList.remove('empti')
+      document.getElementById('txt-1967').classList.remove('visibleR');
+      this.document.getElementById('empti5').classList.remove('empti')
     }
-    if (scrollPosition > posi + 1350) {
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1974').offsetTop) {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
-      empti6.classList.add('empti')
-      monElement4.classList.add('visibleG');
-      empti7.classList.add('empti')
+      this.document.getElementById('empti6').classList.add('empti')
+      document.getElementById('txt-1974').classList.add('visibleG');
+      this.document.getElementById('empti7').classList.add('empti')
     } else {
       // Supprimer la classe visible lorsque la fenêtre de l'utilisateur est à moins de 500 pixels du haut de la page
-      empti6.classList.remove('empti')
-      monElement4.classList.remove('visibleG');
-      empti7.classList.remove('empti')
+      this.document.getElementById('empti6').classList.remove('empti')
+      document.getElementById('txt-1974').classList.remove('visibleG');
+      this.document.getElementById('empti7').classList.remove('empti')
     }
-    if (scrollPosition > posi + 1800) {
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop) {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
-      empti8.classList.add('empti')
-      monElement5.classList.add('visibleR');
+      this.document.getElementById('empti8').classList.add('empti')
+      document.getElementById('txt-1999').classList.add('visibleR');
     } else {
       // Supprimer la classe visible lorsque la fenêtre de l'utilisateur est à moins de 500 pixels du haut de la page
-      empti8.classList.remove('empti')
-      monElement5.classList.remove('visibleR');
+      this.document.getElementById('empti8').classList.remove('empti')
+      document.getElementById('txt-1999').classList.remove('visibleR');
     }
   });
+
+
+var drop2 = document.getElementById("dropleft1");
+var drop3 = document.getElementById("dropleft2");
+if (window.screen.width <= 900) {
+  document.getElementById("img-plus1").style.display = "none";
+  document.getElementById("img-plus2").style.display = "none";
+  document.getElementById("img-plus3").style.display = "none";
+  document.getElementById("img-plus4").style.display = "none";
+  document.getElementById("img-plus5").style.display = "none";
+  document.getElementById("img-plus6").style.display = "none";
+  document.getElementById("dropdown1").style.display = "none";
+  document.getElementById("dropleft1").style.display = "none";
+  document.getElementById("dropleft2").style.display = "none";
+  document.getElementById("dropdown2").style.display = "none";
+  document.getElementById("dropdown3").style.display = "none";
 }
-
-
 
