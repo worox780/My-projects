@@ -34,7 +34,7 @@ a {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 13px 10px;
+  padding: 19px 10px;
   height: 100%;
   opacity: 0.6;
 }
@@ -507,7 +507,7 @@ Bandeau de navigation
     grid-template-columns: 100%;
   }
   .date {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   }
 
@@ -526,7 +526,7 @@ Bandeau de navigation
     height: auto;
   }
   .date {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -538,7 +538,7 @@ Bandeau de navigation
     color: white;
   }
   .date {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
 
@@ -551,6 +551,6 @@ Bandeau de navigation
     color: white;
   }
   .date {
-    font-size: 2em;
+    font-size: 1.7em;
   }
 }
