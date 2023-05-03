@@ -67,25 +67,25 @@ window.addEventListener('scroll', function() {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
       document.getElementById('txt-1957').classList.add('visibleR');
       document.getElementById('empti1').classList.add('empti')
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 300 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 400) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 290) {
           this.document.getElementById("ph1").classList.add("grow")
       }
         else {
           this.document.getElementById("ph1").classList.remove("grow")
         }
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 400 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 500) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 290 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 380) {
           this.document.getElementById("ph2").classList.add("grow")
       }
         else {
           this.document.getElementById("ph2").classList.remove("grow")
         }
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 500 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 600) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 380 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 470) {
           this.document.getElementById("ph3").classList.add("grow")
       }
         else {
           this.document.getElementById("ph3").classList.remove("grow")
         }
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 600 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 700) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 470 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 580) {
           this.document.getElementById("ph4").classList.add("grow")
       }
         else {
