@@ -59,32 +59,33 @@ if (window.screen.width > 300) {
 else {
   posi = 150;
 }
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
 
+
+window.addEventListener('scroll', function() {
+  
     if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop) {
       // Ajouter la classe visible lorsque la fenêtre de l'utilisateur est à plus de 500 pixels du haut de la page
       document.getElementById('txt-1957').classList.add('visibleR');
       document.getElementById('empti1').classList.add('empti')
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 250 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 400) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 300 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 400) {
           this.document.getElementById("ph1").classList.add("grow")
       }
         else {
           this.document.getElementById("ph1").classList.remove("grow")
         }
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 400 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 550) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 400 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 500) {
           this.document.getElementById("ph2").classList.add("grow")
       }
         else {
           this.document.getElementById("ph2").classList.remove("grow")
         }
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 550 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 700) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 500 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 600) {
           this.document.getElementById("ph3").classList.add("grow")
       }
         else {
           this.document.getElementById("ph3").classList.remove("grow")
         }
-      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 700 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 850) {
+      if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 600 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 700) {
           this.document.getElementById("ph4").classList.add("grow")
       }
         else {
