@@ -38,29 +38,6 @@ tooltipContainer.addEventListener('mouseout', () => {
 })
 
 
-if (window.screen.width > 1780) {
-  posi = 1300;
-}
-if (window.screen.width > 1500) {
-  posi = 1125;
-}
-if (window.screen.width > 1000) {
-  posi = 1000;
-}
-if (window.screen.width > 700) {
-  posi = 700;
-}
-if (window.screen.width > 500) {
-  posi = 500;
-}
-if (window.screen.width > 300) {
-  posi = 300;
-}
-else {
-  posi = 150;
-}
-
-
 window.addEventListener('scroll', function() {
   
     if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop) {
