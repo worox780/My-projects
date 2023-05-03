@@ -302,10 +302,9 @@
 -----------------------------next-----------------------------
 */
 
-
 body {
   background-color: #1b9be6;
-  margin: 0px 5px 0px 5px;
+  margin: 0px 10px 0px 10px;
 }
 header {
   position: relative;
@@ -314,9 +313,7 @@ header {
   padding-bottom: 30px;
 }
 main {
-  display: grid;
-  grid-template-columns: 18% 81%;
-  grid-gap: 1%;
+  display: block;
 }
 
 
@@ -428,15 +425,7 @@ Soulignement plus infos supplémentaires
 Bandeau qui se déplace sur la gauche
 */
 
-#left_main {
-  z-index: 1;
-  position: sticky;
-  top: 100px;
-  height: 500px;
-  background-color: #ffffff;
-  padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
+
 #ph1 {
   font-weight: 400;
   transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -670,9 +659,7 @@ Bandeau de navigation
   #left_main {
     display: none;
   }
-  main {
-    display: block;
-  }
+  
   .date {
     font-size: 1em;
   }
@@ -681,10 +668,6 @@ Bandeau de navigation
 @media screen and (max-width: 900px) and (min-width: 500px){
   #left_main {
     display: none;
-  }
-  main {
-    display: grid;
-    grid-template-columns: 100%;
   }
   #title_header {
     position: relative;
