@@ -389,12 +389,26 @@
   color: rgb(0, 0, 0);
   height: auto;
 }
+.grow {
+  transition: 1s background-color ease-in-out;
+}
+.grow-show {
+  background-color: rgb(255, 255, 105, 0.8);
+}
+
 #img-intro-part2 {
   background-image: url(../img/dessin/contraception.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 60vw;
+  height: 100vw;
+}
+#img-part2-intro {
+  position: relative;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: #000000 2px solid;
 }
 #Big-title-part2 {
   font-size: 4em;
@@ -409,16 +423,19 @@
   top: -50px;
 }
 #part2-1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 100px 900px;
   position: relative;
   width: 90%;
   left: 5%;
   background-color: rgb(194, 194, 194);
   border-radius: 25px;
 }
-
+#part2-3 {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  background-color: rgb(194, 194, 194);
+  border-radius: 25px;
+}
 
 
 
@@ -429,13 +446,16 @@
 #part4 {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+  padding-right: 0;
+  margin-right: 0;
 }
 #backgrounf-part4-before {
   background-image: url(../img/dessin/image-contraception-histoire-france.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-attachment: fixed;
-  height: 60vw;
+  height: 100vw;
+  width: 100vw;
 }
 #Big-title-part3 {
   font-size: 4em;
@@ -450,10 +470,27 @@
   top: -50px;
 }
 .part_chr {
-  height: 80vw;  
+  height: auto;  
   background: rgb(0, 0, 0);
 }
-
+.part-img-left {
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 40% 60%;
+  padding-left: 25px;
+  margin-right: 25px;
+}
+.part-img-right {
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 60% 40%;
+  padding-left: 25px;
+  margin-right: 25px;
+}
+.info_imp_left {
+  width: 100%;
+  font-size: 3em;
+}
 
 .date {
   color: #8b8b8b;
@@ -463,10 +500,16 @@
   opacity: 0;
   top: 50px;
 }
+#enovid {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 150px;
+}
 
 #txt-1957 {
   position: relative;
-  top: 10%;
+  height: auto;
   padding-left: 50px;
   margin-bottom: 5px;
   transition: 1ms ease-in-out;
@@ -596,6 +639,14 @@
   color: rgb(255, 255, 255);
 }
 
+
+#veil-main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 150px;
+}
+
 #txt-1974 {
   position: relative;
   padding-left: 50px;
@@ -634,6 +685,14 @@
 }
 #ph3-1974.higlite {
   color: rgb(255, 255, 255);
+}
+
+
+#graphique {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 150px;
 }
 
 #txt-1999 {
@@ -709,10 +768,7 @@
   color: rgb(255, 255, 255);
 }
 
-.info_imp_left {
-  width: 100%;
-  font-size: 3em;
-}
+
 .empti {
   padding: 25px;
 }
@@ -749,7 +805,7 @@
   right: 0;
   margin: auto;
   width: 90%;
-  height: 2px;
+  height: 10px;
   background-color: #ccc;
   color: white;
 }
@@ -762,33 +818,45 @@
 
 .annee1 {
   left: 0%;
+  font-size: 3em;
+  top: -50px;
 }
 .annee2 {
   left: 16.5%;
+  font-size: 3em;
+  top: -50px;
 }
 .annee3 {
   left: 33%;
+  font-size: 3em;
+  top: -50px;
 }
 .annee4 {
   left: 49.5%;
+  font-size: 3em;
+  top: -50px;
 }
 .annee5 {
   left: 66%;
+  font-size: 3em;
+  top: -50px;
 }
 .annee6 {
   left: 82.5%;
+  font-size: 3em;
+  top: -50px;
 }
 
 .fleche {
   position: absolute;
   top: 50%; /* positionner la flèche au centre de la frise */
   transform: translate(-50%, -50%); /* centrer la flèche horizontalement */
-  width: 20px;
-  height: 20px;
-  top: -10px;
+  width: 50px;
+  height: 50px;
+  top: 30px;
   border-top: 2px solid #ccc;
   border-right: 2px solid #ccc;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 
 .fl1 {
@@ -845,6 +913,7 @@ p {
   display: inline-block;
   position: relative;
   color: rgb(0, 175, 175);
+  text-decoration: underline;
 }
 
 .tooltip::after {
