@@ -40,20 +40,196 @@ window.addEventListener('scroll', function() {
             document.getElementById('ph3-intro').classList.remove('higlite')
         }
     }
+})
+
+window.addEventListener('scroll', function() {
     if (window.scrollY + window.innerHeight > document.getElementById('Big-title-part2').offsetTop) {
         document.getElementById('Big-title-part2').classList.add("show");
     }
     else {
         document.getElementById('Big-title-part2').classList.remove("show");
     }
+})
+
+window.addEventListener('scroll', function() {
     if (window.scrollY + window.innerHeight > document.getElementById('Big-title-part3').offsetTop) {
         document.getElementById('Big-title-part3').classList.add("show");
     }
     else {
         document.getElementById('Big-title-part3').classList.remove("show");
     }
-})
+    if (window.scrollY + window.innerHeight > this.document.getElementById('txt-1957').offsetTop) {
+        document.getElementById('ph1-1957').classList.add("show");
+        document.getElementById('ph2-1957').classList.add("show");
+        document.getElementById('ph3-1957').classList.add("show");
+        document.getElementById('ph4-1957').classList.add("show");
+    }else {
+        document.getElementById('ph1-1957').classList.remove("show");
+        document.getElementById('ph2-1957').classList.remove("show");
+        document.getElementById('ph3-1957').classList.remove("show");
+        document.getElementById('ph4-1957').classList.remove("show");
+    }
 
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 350) {
+        document.getElementById('ph1-1957').classList.add('higlite')
+    }else {
+        document.getElementById('ph1-1957').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 350 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 500) {
+        document.getElementById('ph2-1957').classList.add('higlite')
+    }else {
+        document.getElementById('ph2-1957').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 500 && window.scrollY + window.innerHeight < document.getElementById('txt-1957').offsetTop + 650) {
+        document.getElementById('ph3-1957').classList.add('higlite')
+    }else {
+        document.getElementById('ph3-1957').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1957').offsetTop + 650) {
+        document.getElementById('ph4-1957').classList.add('higlite')
+    }else {
+        document.getElementById('ph4-1957').classList.remove('higlite')
+    }
+
+    
+    if (window.scrollY + window.innerHeight > this.document.getElementById('txt-1960').offsetTop) {
+        document.getElementById('ph1-1960').classList.add("show");
+        document.getElementById('ph2-1960').classList.add("show");
+        document.getElementById('ph3-1960').classList.add("show");
+    }else {
+        document.getElementById('ph1-1960').classList.remove("show");
+        document.getElementById('ph2-1960').classList.remove("show");
+        document.getElementById('ph3-1960').classList.remove("show");
+    }
+
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1960').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('txt-1960').offsetTop + 350) {
+        document.getElementById('ph1-1960').classList.add('higlite')
+    }else {
+        document.getElementById('ph1-1960').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1960').offsetTop + 350 && window.scrollY + window.innerHeight < document.getElementById('txt-1960').offsetTop + 500) {
+        document.getElementById('ph2-1960').classList.add('higlite')
+    }else {
+        document.getElementById('ph2-1960').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1960').offsetTop + 500) {
+        document.getElementById('ph3-1960').classList.add('higlite')
+    }else {
+        document.getElementById('ph3-1960').classList.remove('higlite')
+    }
+
+
+    if (window.scrollY + window.innerHeight > this.document.getElementById('txt-1960').offsetTop) {
+        document.getElementById('ph1-1967').classList.add("show");
+        document.getElementById('ph2-1967').classList.add("show");
+        document.getElementById('ph3-1967').classList.add("show");
+    }else {
+        document.getElementById('ph1-1967').classList.remove("show");
+        document.getElementById('ph2-1967').classList.remove("show");
+        document.getElementById('ph3-1967').classList.remove("show");
+    }
+
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1967').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('txt-1967').offsetTop + 350) {
+        document.getElementById('ph1-1967').classList.add('higlite')
+    }else {
+        document.getElementById('ph1-1967').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1967').offsetTop + 350 && window.scrollY + window.innerHeight < document.getElementById('txt-1967').offsetTop + 500) {
+        document.getElementById('ph2-1967').classList.add('higlite')
+    }else {
+        document.getElementById('ph2-1967').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1967').offsetTop + 500) {
+        document.getElementById('ph3-1967').classList.add('higlite')
+    }else {
+        document.getElementById('ph3-1967').classList.remove('higlite')
+    }
+
+
+    if (window.scrollY + window.innerHeight > this.document.getElementById('txt-1974').offsetTop) {
+        document.getElementById('ph1-1974').classList.add("show");
+        document.getElementById('ph2-1974').classList.add("show");
+        document.getElementById('ph3-1974').classList.add("show");
+    }else {
+        document.getElementById('ph1-1974').classList.remove("show");
+        document.getElementById('ph2-1974').classList.remove("show");
+        document.getElementById('ph3-1974').classList.remove("show");
+    }
+
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1974').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('txt-1974').offsetTop + 350) {
+        document.getElementById('ph1-1974').classList.add('higlite')
+    }else {
+        document.getElementById('ph1-1974').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1974').offsetTop + 350 && window.scrollY + window.innerHeight < document.getElementById('txt-1974').offsetTop + 500) {
+        document.getElementById('ph2-1974').classList.add('higlite')
+    }else {
+        document.getElementById('ph2-1974').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1974').offsetTop + 500) {
+        document.getElementById('ph3-1974').classList.add('higlite')
+    }else {
+        document.getElementById('ph3-1974').classList.remove('higlite')
+    }
+
+
+    if (window.scrollY + window.innerHeight > this.document.getElementById('txt-1974').offsetTop) {
+        document.getElementById('ph1-1999').classList.add("show");
+        document.getElementById('ph2-1999').classList.add("show");
+        document.getElementById('ph3-1999').classList.add("show");
+        document.getElementById('ph4-1999').classList.add("show");
+        document.getElementById('ph5-1999').classList.add("show");
+        document.getElementById('ph6-1999').classList.add("show");
+    }else {
+        document.getElementById('ph1-1999').classList.remove("show");
+        document.getElementById('ph2-1999').classList.remove("show");
+        document.getElementById('ph3-1999').classList.remove("show");
+        document.getElementById('ph4-1999').classList.remove("show");
+        document.getElementById('ph5-1999').classList.remove("show");
+        document.getElementById('ph6-1999').classList.remove("show");
+    }
+
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('txt-1999').offsetTop + 350) {
+        document.getElementById('ph1-1999').classList.add('higlite')
+    }else {
+        document.getElementById('ph1-1999').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop + 350 && window.scrollY + window.innerHeight < document.getElementById('txt-1999').offsetTop + 500) {
+        document.getElementById('ph2-1999').classList.add('higlite')
+    }else {
+        document.getElementById('ph2-1999').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop + 500 && window.scrollY + window.innerHeight < document.getElementById('txt-1999').offsetTop + 650) {
+        document.getElementById('ph3-1999').classList.add('higlite')
+    }else {
+        document.getElementById('ph3-1999').classList.remove('higlite')
+    }q
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop + 650 && window.scrollY + window.innerHeight < document.getElementById('txt-1999').offsetTop + 800) {
+        document.getElementById('ph4-1999').classList.add('higlite')
+    }else {
+        document.getElementById('ph4-1999').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop + 800 && window.scrollY + window.innerHeight < document.getElementById('txt-1999').offsetTop + 950) {
+        document.getElementById('ph5-1999').classList.add('higlite')
+    }else {
+        document.getElementById('ph5-1999').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-1999').offsetTop + 950) {
+        document.getElementById('ph6-1999').classList.add('higlite')
+    }else {
+        document.getElementById('ph6-1999').classList.remove('higlite')
+    }
+});
+
+window.addEventListener('scroll', function() {
+    if (this.window.screen.width > 790) {
+        this.document.getElementById("menu-phone-all").classList.add("hide")
+        this.document.getElementById("menu-pc").classList.remove("hide")
+    }else {
+        this.document.getElementById("menu-phone-all").classList.remove("hide")
+        this.document.getElementById("menu-pc").classList.add("hide")
+    }
+})
 
 window.addEventListener('scroll', function() {
     

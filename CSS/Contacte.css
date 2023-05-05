@@ -7,20 +7,19 @@
 /*
 -----------------------------menu pc-----------------------------
 */
-
-@media screen and (min-width: 790px) {
-  .menu-phone-all {
-    display: none;
-  }
-  #menu-pc {
-    display: block;
-  }
+#menu-pc {
+  display: block;
+}
+#menu-pc.hide {
+  display: none;
+}
   a {
     text-decoration: none;
     color: white;
   }
   #navbar-pc {
     position: fixed;
+    top: 0;
     z-index: 2;
     left: 0;
     display: flex;
@@ -136,20 +135,18 @@
   main {
     margin-top: 100px;
   }
-}
+
 
 /*
 -----------------------------menu phone-----------------------------
 */
 
-@media screen and (max-width: 790px) {
-  #menu-pc {
-    display: none;
-  }
-  .menu-phone-all {
-    display: block;
-  }
-
+#menu-phone-all {
+  display: block;
+}
+#menu-phone-all.hide {
+  display: none;
+}
   button {
     border: 0;
     padding: 0;
@@ -288,8 +285,6 @@
   }
 
 
-}
-
 /*
 -----------------------------Partie 1-----------------------------
 */
@@ -350,6 +345,7 @@
   width: auto;
   opacity: 0;
   top: 50px;
+  right: 20px;
   text-align: center;
   transition: opacity 1s ease-in-out, top 1s ease-in-out;
 }
@@ -432,12 +428,12 @@
 
 #part4 {
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 #backgrounf-part4-before {
   background-image: url(../img/dessin/image-contraception-histoire-france.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
   height: 60vw;
 }
@@ -453,8 +449,273 @@
   opacity: 1;
   top: -50px;
 }
+.part_chr {
+  height: 80vw;  
+  background: rgb(0, 0, 0);
+}
 
 
+.date {
+  color: #8b8b8b;
+}
+.ph-date {
+  position: relative;
+  opacity: 0;
+  top: 50px;
+}
+
+#txt-1957 {
+  position: relative;
+  top: 10%;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  transition: 1ms ease-in-out;
+}
+#ph1-1957 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.1s;
+}
+#ph2-1957 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+#ph3-1957 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+#ph4-1957 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.4s;
+}
+#ph1-1957.show {
+  opacity: 1;
+  top: 0;
+}
+#ph2-1957.show {
+  opacity: 1;
+  top: 0;
+}
+#ph3-1957.show {
+  opacity: 1;
+  top: 0;
+}
+#ph4-1957.show {
+  opacity: 1;
+  top: 0;
+}
+#ph1-1957.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph2-1957.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph3-1957.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph4-1957.higlite {
+  color: rgb(255, 255, 255);
+}
+
+#txt-1960 {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  transition: 1ms ease-in-out;
+}
+#ph1-1960 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.1s;
+}
+#ph2-1960 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+#ph3-1960 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+#ph1-1960.show {
+  opacity: 1;
+  top: 0;
+}
+#ph2-1960.show {
+  opacity: 1;
+  top: 0;
+}
+#ph3-1960.show {
+  opacity: 1;
+  top: 0;
+}
+#ph1-1960.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph2-1960.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph3-1960.higlite {
+  color: rgb(255, 255, 255);
+}
+
+#txt-1967 {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  transition: 1ms ease-in-out;
+}
+#ph1-1967 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.1s;
+}
+#ph2-1967 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+#ph3-1967 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+#ph1-1967.show {
+  opacity: 1;
+  top: 0;
+}
+#ph2-1967.show {
+  opacity: 1;
+  top: 0;
+}
+#ph3-1967.show {
+  opacity: 1;
+  top: 0;
+}
+#ph1-1967.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph2-1967.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph3-1967.higlite {
+  color: rgb(255, 255, 255);
+}
+
+#txt-1974 {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  transition: 1ms ease-in-out;
+}
+#ph1-1974 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.1s;
+}
+#ph2-1974 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+#ph3-1974 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+#ph1-1974.show {
+  opacity: 1;
+  top: 0;
+}
+#ph2-1974.show {
+  opacity: 1;
+  top: 0;
+}
+#ph3-1974.show {
+  opacity: 1;
+  top: 0;
+}
+#ph1-1974.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph2-1974.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph3-1974.higlite {
+  color: rgb(255, 255, 255);
+}
+
+#txt-1999 {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  transition: 1ms ease-in-out;
+}
+#ph1-1999 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.1s;
+}
+#ph2-1999 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+#ph3-1999 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+#ph4-1999 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.4s;
+}
+#ph5-1999 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+#ph6-1999 {
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition-delay: 0.6s;
+}
+#ph1-1999.show {
+  opacity: 1;
+  top: 0;
+}
+#ph2-1999.show {
+  opacity: 1;
+  top: 0;
+}
+#ph3-1999.show {
+  opacity: 1;
+  top: 0;
+}
+#ph4-1999.show {
+  opacity: 1;
+  top: 0;
+}
+#ph5-1999.show {
+  opacity: 1;
+  top: 0;
+}
+#ph6-1999.show {
+  opacity: 1;
+  top: 0;
+}
+#ph1-1999.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph2-1999.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph3-1999.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph4-1999.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph5-1999.higlite {
+  color: rgb(255, 255, 255);
+}
+#ph6-1999.higlite {
+  color: rgb(255, 255, 255);
+}
+
+.info_imp_left {
+  width: 100%;
+  font-size: 3em;
+}
+.empti {
+  padding: 25px;
+}
 /*
 -----------------------------frise-----------------------------
 */
@@ -531,67 +792,22 @@
 }
 
 .fl1 {
-  position: absolute;
-  top: 50%; /* positionner la flèche au centre de la frise */
-  transform: translate(-50%, -50%); /* centrer la flèche horizontalement */
-  width: 20px;
-  height: 20px;
-  top: -10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(45deg);
   left: 0%;
   transition: left 3s ease-in-out;
 }
 .fl2 {
-  position: absolute;
-  top: 50%; /* positionner la flèche au centre de la frise */
-  transform: translate(-50%, -50%); /* centrer la flèche horizontalement */
-  width: 20px;
-  height: 20px;
-  top: -10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(45deg);
   left: 16.5%;
   transition: left 3s ease-in-out;
 }
 .fl3 {
-  position: absolute;
-  top: 50%; /* positionner la flèche au centre de la frise */
-  transform: translate(-50%, -50%); /* centrer la flèche horizontalement */
-  width: 20px;
-  height: 20px;
-  top: -10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(45deg);
   left: 33%;
   transition: left 3s ease-in-out;
 }
 .fl4 {
-  position: absolute;
-  top: 50%; /* positionner la flèche au centre de la frise */
-  transform: translate(-50%, -50%); /* centrer la flèche horizontalement */
-  width: 20px;
-  height: 20px;
-  top: -10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(45deg);
   left: 49.5%;
   transition: left 3s ease-in-out;
 }
 .fl5 {
-  position: absolute;
-  top: 50%; /* positionner la flèche au centre de la frise */
-  transform: translate(-50%, -50%); /* centrer la flèche horizontalement */
-  width: 20px;
-  height: 20px;
-  top: -10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(45deg);
   left: 66%;
   transition: left 3s ease-in-out;
 }
@@ -615,136 +831,15 @@
 -----------------------------next-----------------------------
 */
 
-@keyframes translateG {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+h2 {
+  font-size: 3em;
 }
-@keyframes translateR {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.visibleR {
-  display: block;
-  animation-name: translateR;
-  
-  animation-duration: 2s;
-}
-.visibleG-img {
-  opacity: 1;
-  display: block;
-  animation-name: translateG;
-  animation-duration: 2s;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-}
-
-header {
-  position: relative;
-  color: white;
-  margin: 0px;
-  padding-bottom: 10px;
-}
-main {
-  display: block;
-}
-
-
-@media screen and (min-width: 1300px) {
-  h2 {
-    text-align: justify;
-    font-size: 2.5em;
-  }
-  #txt-intro-def {
-    font-size: 2.5em;
-  }
-}
-@media screen and (max-width: 1300px) {
-  h2 {
-    text-align: justify;
-    font-size: 1.9em;
-  }
-  #txt-intro-def {
-    font-size: 2em;
-  }
-}
-@media screen and (max-width: 1000px) {
-  h2 {
-    text-align: justify;
-    font-size: 1em;
-  }
-}
-
-
-
-#part4 {
-  height: auto;
-}
-.part_chr {
-  background: rgb(255,12,0);
-  background: linear-gradient(162deg, rgba(255,12,0,1) 0%, rgba(249,129,0,1) 47%, rgba(198,255,0,1) 100%);
-}
-
-h1 {
+p {
   font-size: 3em;
 }
 
-h3 {
-  font-size: 1.8em;
-}
-p {
-  font-size: 1.2em;
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  opacity: 0.8;
-}
-img {
-  height: auto;
-  width: auto;
-}
-
 /*
-lien de la page mis en valeur
-*/
-.a-most-imp {
-font-weight: 800;
-}
-
-/*
-Partie de droite
-*/
-
-.title-part {
-  border-top: solid;
-}
-.title-sous-part {
-  width: 50%;
-  border-top: solid;
-}
-.right-first-main {
-  right: 100%;
-  background-color: #0C4A7C;
-  border-radius: 2px;
-  border: 2px solid rgba(0, 0, 0, 0.500);
-}
-
-
-/*
-Soulignement plus infos supplémentaires
+-----------------------------Tooltip-----------------------------
 */
 .tooltip {
   display: inline-block;
@@ -800,259 +895,3 @@ Soulignement plus infos supplémentaires
 /*
 Bandeau qui se déplace sur la gauche
 */
-
-
-#ph1 {
-  font-weight: 400;
-  transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-#ph1.grow {
-  font-size: 1.05em;
-  color: black;
-}
-#ph2 {
-  font-weight: 400;
-  transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-#ph2.grow {
-  font-size: 1.05em;
-  color: black;
-}
-#ph3 {
-  font-weight: 400;
-  transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-#ph3.grow {
-  font-size: 1.05em;
-  color: black;
-}
-#ph4 {
-  font-weight: 400;
-  transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-#ph4.grow {
-  font-size: 1.05em;
-  color: black;
-}
-
-
-.higlite {
-  z-index: 1;
-  position: relative;
-}
-
-.higlite::after {
-  z-index: 0;
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  top: 20px;
-  height: 4px;
-  background-color: rgb(255, 0, 0);
-  transition: width 0.5s ease-in-out;
-}
-
-/* Animation */
-#info_imp_left:hover ~ p .higlite::after {
-  width: 100%;
-}
-
-
-/*
-Bandeau de navigation
-*/
-
-.date {
-  color: rgb(146, 146, 146);
-}
-#txt-1957 {
-  position: relative;
-  padding: 2px;
-  margin-bottom: 5px;
-  background-color: #0C4A7C;
-  transition: 1ms ease-in-out;
-}
-.empti {
-  padding: 25px;
-}
-#txt-1960 {
-  position: relative;
-  padding: 2px;
-  margin-bottom: 5px;
-  background-color: #0C4A7C;
-  transition: 1ms ease-in-out;
-}
-#txt-1967 {
-  position: relative;
-  padding: 2px;
-  margin-bottom: 5px;
-  background-color: #0C4A7C;
-  transition: 1ms ease-in-out;
-}
-#txt-1974 {
-  position: relative;
-  padding: 2px;
-  margin-bottom: 5px;
-  background-color: #0C4A7C;
-  transition: 1ms ease-in-out;
-}
-#txt-1999 {
-  position: relative;
-  padding: 2px;
-  margin-bottom: 5px;
-  background-color: #0C4A7C;
-  transition: 1ms ease-in-out;
-}
-
-/*
-#inpt-1957:checked ~ #txt-1957{
-  opacity: 0;
-  display: block;
-  animation-duration: 400ms;
-  animation-name: show;
-  animation-fill-mode: forwards
-}
-#inpt-1957:not(checked) ~ #txt-1957{
-  display: none;
-}
-*/
-
-
-
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#title_header {
-  position: absolute;
-  right: 1%;
-  top: 50px;
-  transform: translateY(-50%);
-}
-#pr_img {
-  width: 100%;
-  height: auto;
-}
-#sec_img {
-  width: 100%;
-  height: auto;
-}
-#tr_img {
-  width: 100%;
-  height: auto;
-}
-#txt-bande {
-  width: auto;
-  height: auto;
-}
-
-@media screen and (min-width: 500px) {
-  #sec_img {
-    width: 80%;
-    height: auto;
-  }
-  .part {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1%;
-    margin-bottom: 50px;
-    grid-template-rows: auto;
-  
-  }
-  .part_chr {
-    display: grid;
-    grid-template-columns: 69.5% 29.5%;
-    gap: 1%;
-  }
-  }
-
-@media screen and (max-width: 500px) {
-  #pr_img {
-    width: 100%;
-    height: auto;
-  }
-  #sec_img {
-    width: 100%;
-    height: auto;
-  }
-  #tr_img {
-    width: 100%;
-    height: auto;
-  }
-  .part {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    grid-gap: 1%;
-    margin-bottom: 50px;
-  }
-  h2 {
-    font-size: 1.6em;
-  }
-  h3 {
-    font-size: 1.4em;
-  }
-  H1 {
-    font-size: 2em;
-  }
-  #title_header {
-    position: relative;
-    top: 15px;
-    left: 5px;
-    width: 80%;
-    height: auto;
-  }
-  #left_main {
-    display: none;
-  }
-  
-  .date {
-    font-size: 1em;
-  }
-  }
-
-@media screen and (max-width: 900px) and (min-width: 500px){
-  #left_main {
-    display: none;
-  }
-  #title_header {
-    position: relative;
-    left: 5px;
-    width: 400px;
-    height: auto;
-  }
-  .date {
-    font-size: 1.3em;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  footer {
-    margin-top: 20px;
-    height: 50px;
-    background-color: #000000;
-    color: white;
-  }
-  .date {
-    font-size: 1.5em;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  footer {
-    margin-top: 20px;
-    padding-bottom: 40px;
-    height: 50px;
-    background-color: #000000;
-    color: white;
-  }
-  .date {
-    font-size: 1.8em;
-  }
-}
