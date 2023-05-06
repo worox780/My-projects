@@ -451,10 +451,10 @@
 #backgrounf-part4-before {
   background-image: url(../img/dessin/image-contraception-histoire-france.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: left top;
   background-attachment: fixed;
   height: 100vw;
-  width: 100vw;
+  width: auto;
 }
 #Big-title-part3 {
   font-size: 4em;
