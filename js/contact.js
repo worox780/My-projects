@@ -11,11 +11,10 @@ const data = [
     {id: 6, txt: "Le Mouvement français pour le planning familial, ou planning familial, est une association française régie par la loi de 1901."},
     {id: 7, txt: "La loi Neuwirth est une loi française adoptée par l'Assemblée nationale et le Sénat le 19 décembre 1967 qui autorise l’usage des contraceptifs, et notamment la contraception orale."},
     {id: 8, txt: "La loi du 17 janvier 1975 relative à l'interruption volontaire de grossesse, dite loi Veil, est une loi encadrant une dépénalisation de l'avortement en France."},
-    {id: 9, txt: "Simone Veil, née Simone Jacob le 13 juillet 1927 à Nice (Alpes-Maritimes) et morte le 30 juin 2017 à Paris, est une magistrate et une femme d’État française."},
-    {id: 10, txt: "Le port"},
-    {id: 11, txt: "L’avortement se définit comme l'interruption du processus de gestation,"},
+    {id: 9, txt: "L’avortement se définit comme l'interruption du processus de gestation"},
+    {id: 10, txt: "Mange ta mort"},
+    {id: 11, txt: "L’avortement se définit comme l'interruption du processus de gestation"}
 ]
-
 
 let tooltipID;
 tooltips.forEach((tooltip) => {
