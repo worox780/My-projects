@@ -89,6 +89,12 @@ window.addEventListener('scroll', function() {
 })
 
 window.addEventListener('scroll', function() {
+    if (window.scrollY + window.innerHeight > document.getElementById('Big-title-part2').offsetTop) {
+        document.getElementById('Big-title-part2').classList.add("show");
+    }
+    else {
+        document.getElementById('Big-title-part2').classList.remove("show");
+    }
     if (window.scrollY + window.innerHeight > document.getElementById('part2-1').offsetTop) {
         document.getElementById('part2-1').classList.add("show");
         document.getElementById('img-part2-intro').classList.add("show");
@@ -129,14 +135,6 @@ window.addEventListener('scroll', function() {
     }
 })
 
-window.addEventListener('scroll', function() {
-    if (window.scrollY + window.innerHeight > document.getElementById('Big-title-part2').offsetTop) {
-        document.getElementById('Big-title-part2').classList.add("show");
-    }
-    else {
-        document.getElementById('Big-title-part2').classList.remove("show");
-    }
-})
 
 window.addEventListener('scroll', function() {
     if (window.scrollY + window.innerHeight > document.getElementById('Big-title-part3').offsetTop) {

@@ -8,72 +8,168 @@
         </head>
     
     <body>
-        <nav class="navbar">
-          <div class="dropdowns">
-              <div class="dropdown">
-                  <div id="Acceuil" >
-                      <a href="../index.html" class="button">Acceuil <img id="img-plus" src="../img/chevron.svg" /></a>
-                      <div class="dropdown-menu">
-                          <a href="../index.html#Qu-est-ce-que-la-contraception" class="button-in">Qu'est ce que la contraception</a>
-                          <a href="../index.html#L-histoire-de-la-contraception" class="button-in">L'histoire de la contraception</a>
-                          <a href="../index.html#L-histoire-de-la-contracepetion-en-France" class="button-in">L'histoire de la contracepetion en France</a>
-                      </div>
-                  </div>
+        <header>
+            <div id="menu-phone-all">
+              <button id="button-menu" class="burger" onclick="toggleMenu()"></button>
+              <div class="menu-phone">
+                <nav id="link-menu-phone-storage">menu-phone-all
+                  <a class="link-menu-phone" href="../index.html" style="animation-delay: 0.2s">Acceuil</a>
+                  <a class="link-menu-phone" href="contraception1.html" style="animation-delay: 0.3s">Contraception hormonal régulière</a>
+                  <a class="link-menu-phone" href="contraception2.html" style="animation-delay: 0.4s">Contraception hormonal d'urgence</a>
+                  <a class="link-menu-phone" href="Les_sources.html" style="animation-delay: 0.5s">Sources</a>
+                  <a class="link-menu-phone" href="a_propos.html" style="animation-delay: 0.6s">A propos</a>
+                  <a class="link-menu-phone" href="Contacte.html" style="animation-delay: 0.7s">Contacte</a>
+                </nav>
               </div>
-              <div class="dropdown">
-                  <div id="contracepetion">
-                      <a href="contraception.html" class="button">Moyens de contracepetions hormonaux <img src="../img/chevron.svg" /></a>
-                      <div class="dropdown-menu">
-                          <div class="dropleft">
-                              <a href="contraception1.html" class="button-in">Contraception hormonal régulière <img src="../img/chevron.svg" /></a>
-                              <div id="contra1" class="dropleft-menu">
-                                  <a href="contraception1.html#ancre1" class="button-in">Ancre1</a>
-                                  <a href="contraception1.html#ancre2" class="button-in">Ancre2</a>
-                                  <a href="contraception1.html#ancre3" class="button-in">Ancre3</a>
-                              </div>
-                          </div>
-                          <div class="dropleft">
-                              <a href="contraception2.html" class="button-in">Contraception hormonal d'urgence <img src="../img/chevron.svg" /></a>
-                              <div id="contra2" class="dropleft-menu">
-                                  <a href="contraception2.html#ancre1" class="button-in">Ancre1</a>
-                                  <a href="contraception2.html#ancre2" class="button-in">Ancre2</a>
-                                  <a href="contraception2.html#ancre3" class="button-in">Ancre3</a>
+              <script type="text/javascript">
+                const toggleMenu = () => document.body.classList.toggle("open");
+              </script>
+            </div>
+            <div id="menu-pc">
+              <nav id="navbar-pc">
+                  <div class="dropdowns">
+                      <div class="dropdown">
+                          <div id="Acceuil" >
+                              <a href="../index.html" class="button">Acceuil <img id="img-plus1" src="../img/logo/chevron.svg" /></a>
+                              <div class="dropdown-menu">
+                                  <a href="../index.html#Qu-est-ce-que-la-contraception" class="button-in">Qu'est ce que la contraception</a>
+                                  <a href="../index.html#La-contraception-hormonale-dans-le-monde" class="button-in">La contraception hormonale dans le monde</a>
+                                  <a href="../index.html#L-histoire-de-la-contracepetion-en-France" class="button-in">L'histoire de la contracepetion en France</a>
                               </div>
                           </div>
                       </div>
-                  </div>
-              </div>
-              <div>
-                  <div id="sources" class="button">
-                      <a href="Les_sources.html">Les sources</a>
-                  </div>
-              </div>
-              <div class="dropdown">
-                  <div id="propos">
-                      <a href="a_propos.html" class="button">A propos <img src="../img/chevron.svg" /></a>
-                      <div class="dropdown-menu">
-                          <a href="a_propos.html#Arnav-Surana" class="button-in">Arnav Surana</a>
-                          <a href="a_propos.html#Louis-Verite" class="button-in">Louis Verite</a>
-                          <a href="a_propos.html#ancre1" class="button-in">Ancere 3</a>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                          <div id="contracepetion">
+                              <a href="contraception1.html" class="button">Contraception hormonal régulière <img id="img-plus2" src="../img/logo/chevron.svg" /></a>
+                              <div class="dropdown-menu">
+                                    <a href="contraception1.html#ancre1" class="button-in">Ancre1</a>
+                                    <a href="contraception1.html#ancre2" class="button-in">Ancre2</a>
+                                    <a href="contraception1.html#ancre3" class="button-in">Ancre3</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                        <div id="Contracetion-general" >
+                            <a href="contraception2.html" class="button">Contraception hormonal d'urgence <img id="img-plus1" src="../img/logo/chevron.svg" /></a>
+                            <div class="dropdown-menu">
+                                <a href="contraception2.html#ancre1" class="button-in">Ancre1</a>
+                                <a href="contraception2.html#ancre2" class="button-in">Ancre2</a>
+                                <a href="contraception2.html#ancre3" class="button-in">Ancre3</a>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="barre">
+                      </div>
+                      <div>
+                          <div id="sources" class="button">
+                              <a href="Les_sources.html">Sources</a>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                          <div id="propos">
+                              <a href="a_propos.html" class="button">A propos <img id="img-plus5" src="../img/logo/chevron.svg" /></a>
+                              <div div="dropdow2" class="dropdown-menu">
+                                  <a href="a_propos.html#Arnav-Surana" class="button-in">Arnav Surana</a>
+                                  <a href="a_propos.html#Louis-Verite" class="button-in">Louis Verite</a>
+                                  <a href="a_propos.html#ancre1" class="button-in">Ancere 3</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                          <div id="Contact">
+                              <a href="Contacte.html" class="button">Contacte <img id="img-plus6" src="../img/logo/chevron.svg" /></a>
+                              <div div="dropdown3" class="dropdown-menu">
+                                  <a href="Contacte.html#email" class="button-in">Email</a>
+                                  <a href="Contacte.html#telephone" class="button-in">Telephone</a>
+                                  <a href="Contacte.html#Adresse" class="button-in">Adresse</a>
+                              </div>
+                          </div>
                       </div>
                   </div>
-              </div>
-              <div class="dropdown">
-                  <div id="Contact">
-                      <a href="Contacte.html" class="button">Comment nous contacter <img src="../img/chevron.svg" /></a>
-                      <div class="dropdown-menu">
-                          <a href="Contacte.html#email" class="button-in">Email</a>
-                          <a href="Contacte.html#telephone" class="button-in">Telephone</a>
-                          <a href="Contacte.html#Adresse" class="button-in">Adresse</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </nav>
-        
-        <H1>Contraception hormanal régulière<br> En cours de développement</H1>
+              </nav>
+            </div>
+        </header>
+        <main>
 
+        </main>
+            <div id="part0">
+                
+            </div>
+            <div id="part1">
+                <div class="empti-before-part"></div>
+                <h1 id="Big-title-intro">La contraception hormonale régulière</h1>
+                <div class="empti-before-part"></div>
+                    <h2></h2>
+                    <div class="empti-before-part-big"></div>
+                    <div id="Qu-est-ce-que-la-contraception">
+                        <div class="empti-before-part"></div>
+                        <div id="container-intro">
+                            <a target="_blank" href='https://.pngtree.com/so/Illustration'><img id="img-intro-contra" src="https://www.radiofrance.fr/s3/cruiser-production/2019/04/dbbcc8ec-080d-4036-9488-37a7444bfad3/1200x680_gettyimages-481684759.jpg" alt=""></a>
+                            <div id="container-texte-intro">
+                                <h2 id="Medium-title-part1">Qu'est ce que la contraception hormonale régulière</h2>
+                                <p id="txt-intro-def">
+                                    <span id="ph1-intro">La pilule est un moyen de contraception qui se fait par voie orale, </span>
+                                    <span id="ph2-intro">c’est-à-dire qu’elle se fait sous la forme de comprimés. </span>
+                                    <span id="ph3-intro">Ces comprimés contiennent une version synthétique 
+                                        des hormones sexuelles féminines (œstrogènes et progestérone). </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empti-before-part"></div>
+            </div>
+            <div id="img-intro-part2"></div>
+            <div id="part2">
+                
+                <div class="empti-before-part"></div>
+                <h1 id="Big-title-part2">Quel type de pilule existe-t-il ?</h1>
+                <div class="empti-before-part"></div>
+                <p id="texte-intro-part2">
+                    Il existe 2 types de pilules : <br>
+                    les pilules combinées contenant les deux hormones, appelées pilules œstroprogestatives, <br>
+                    ou bien progestatives, contenant seulement une hormone de synthèse.
+                </p>
+            </div>
+            <div class="empti-before-part-big"></div>
+            <div class="empti-before-part-big"></div>
+                <video autoplay muted loop id="video-background">
+                    <source src="../img/molecules/1.mp4" type="video/mp4">
+                  </video>
+            <div id="part2">
+                <div id="part2-1">
+                    <h2 id="titre-intro2-1">La pilule combinée ou œstroprogestatives</h2>
+                    <p>
+                        Ce type de pilule possède les deux hormones synthèses. <br>
+                        Cette pillule contient un œstrogène et un progestatif, qui imitent les hormones féminines 
+                        que sont l'œstradiol et la progestérone, sécrétées naturellement par les ovaires de 
+                        la femme qui sont à l'origine du blocage de l'ovulation induit par la prise de la pilule combinée.
+
+                    </p>
+                </div>
+                <div id="part2-2">
+                    <h2 id="titre-intro2-2">La pilule progestatives</h2>
+                </div>
+            </div>
+            
+            <div id="part3">
+                <p>jsp</p>
+                lol
+            </div>
+            <div id="part4">
+                jsp
+            </div>
+            
+        </main>
         <footer>
             <p>Copyright © 2023 Mon site web</p>
         </footer>
+        <script src="../js/contraception-regu.js"></script>
     </body>
