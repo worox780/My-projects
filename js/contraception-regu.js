@@ -60,4 +60,32 @@ window.addEventListener('scroll', function() {
     else {
         document.getElementById('Big-title-part2').classList.remove("show");
     }
+    if (window.scrollY + window.innerHeight > document.getElementById('titre-intro2-2').offsetTop) {
+        document.getElementById('titre-intro2-2').classList.add("show");
+    }
+    else {
+        document.getElementById('titre-intro2-2').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('titre-intro2-1').offsetTop) {
+        document.getElementById('titre-intro2-1').classList.add("show");
+    }
+    else {
+        document.getElementById('titre-intro2-1').classList.remove("show");
+    }
+
+    if (window.scrollY + window.innerHeight > document.getElementById('part21').offsetTop + 200 && window.scrollY + window.innerHeight < document.getElementById('part21').offsetTop + 600) {
+        document.getElementById('ph1-part2').classList.add('higlite')
+    }else {
+        document.getElementById('ph1-part2').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('part21').offsetTop + 600 && window.scrollY + window.innerHeight < document.getElementById('part21').offsetTop + 750) {
+        document.getElementById('ph2-part2').classList.add('higlite')
+    }else {
+        document.getElementById('ph2-part2').classList.remove('higlite')
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('part21').offsetTop + 750) {
+        document.getElementById('ph3-part2').classList.add('higlite')
+    }else {
+        document.getElementById('ph3-part2').classList.remove('higlite')
+    }
 })
