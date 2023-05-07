@@ -296,6 +296,12 @@
   width: 100vw;
   position: relative;
 }
+#part1 p {
+  font-size: 3em;
+}
+h2 {
+  font-size: 3em;
+}
 #Big-title-intro {
   font-size: 4em;
   position: relative;
@@ -388,13 +394,59 @@
   color: rgb(0, 0, 0);
   height: auto;
 }
-.grow {
-  transition: 1s background-color ease-in-out;
+.part2p {
+  font-size: 1.5em;
 }
-.grow-show {
-  background-color: rgb(255, 255, 105, 0.8);
+#part2 h2 {
+  font-size: 3em;
 }
-
+#part2 p {
+  font-size: 1.5em;
+}
+.grid-part2-p {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+#txt1-part2-3 {
+  position: relative;
+  top: 25%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#txt1-part2-3.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#txt2-part2-3 {
+  position: relative;
+  top: 25%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#txt2-part2-3.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#txt3-part2-3 {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#txt3-part2-3.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 #img-intro-part2 {
   background-image: url(../img/dessin/contraception.png);
   background-size: cover;
@@ -402,12 +454,24 @@
   background-attachment: fixed;
   height: 100vw;
 }
+#grid-part1-2 {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  gap: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
 #img-part2-intro {
   position: relative;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 100%;
   border: #000000 2px solid;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#img-part2-intro.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 #Big-title-part2 {
   font-size: 4em;
@@ -422,18 +486,52 @@
   top: -50px;
 }
 #part2-1 {
+  text-align: center;
   position: relative;
-  width: 90%;
-  left: 5%;
-  background-color: rgb(194, 194, 194);
-  border-radius: 25px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#part2-1.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#part2-2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#part2-2-transition {
+  background-image: url(https://s3.mordorintelligence.com/hormonal-contraceptives-market/1579586128798_hormonal-contraceptives-market_Hormonal_Contraceptives_Market_-__Growth_Rate_by_Region.png);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  height: 50vw;
+  width: auto;
+}
+#txt-part2-2 {
+  width: 60%;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#txt-part2-2.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 #part2-3 {
   position: relative;
-  width: 90%;
-  left: 5%;
-  background-color: rgb(194, 194, 194);
-  border-radius: 25px;
+}
+#part2-4 {
+  width: 60%;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#part2-4.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -447,6 +545,9 @@
   color: rgb(255, 255, 255);
   padding-right: 0;
   margin-right: 0;
+}
+#part4 p {
+  font-size: 2em;
 }
 #backgrounf-part4-before {
   background-image: url(../img/dessin/image-contraception-histoire-france.jpg);
@@ -769,7 +870,7 @@
 
 
 .empti {
-  padding: 25px;
+  height: 100px;
 }
 /*
 -----------------------------frise-----------------------------
@@ -898,12 +999,6 @@
 -----------------------------next-----------------------------
 */
 
-h2 {
-  font-size: 3em;
-}
-p {
-  font-size: 3em;
-}
 
 /*
 -----------------------------Tooltip-----------------------------

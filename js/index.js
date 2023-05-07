@@ -89,19 +89,43 @@ window.addEventListener('scroll', function() {
 })
 
 window.addEventListener('scroll', function() {
-    // sélectionner tous les éléments div avec la classe "example"
-    var growTexte = document.querySelectorAll("span.grow");
-
-    // boucle à travers chaque élément et ajouter la classe "new-class"
-    
-    if (this.window.scrollY + this.window.innerHeight > this.document.getElementById('part2-1').offsetTop) {
-        for (var i = 0; i < growTexte.length; i++) {
-            growTexte[i].classList.add("grow-show");
-        }
-    }else {
-        for (var i = 0; i < growTexte.length; i++) {
-            growTexte[i].classList.remove("grow-show");
-        }
+    if (window.scrollY + window.innerHeight > document.getElementById('part2-1').offsetTop) {
+        document.getElementById('part2-1').classList.add("show");
+        document.getElementById('img-part2-intro').classList.add("show");
+    }
+    else {
+        document.getElementById('part2-1').classList.remove("show");
+        document.getElementById('img-part2-intro').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt-part2-2').offsetTop) {
+        document.getElementById('txt-part2-2').classList.add("show");
+    }
+    else {
+        document.getElementById('txt-part2-2').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt1-part2-3').offsetTop) {
+        document.getElementById('txt1-part2-3').classList.add("show");
+    }
+    else {
+        document.getElementById('txt1-part2-3').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt2-part2-3').offsetTop) {
+        document.getElementById('txt2-part2-3').classList.add("show");
+    }
+    else {
+        document.getElementById('txt2-part2-3').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('txt3-part2-3').offsetTop) {
+        document.getElementById('txt3-part2-3').classList.add("show");
+    }
+    else {
+        document.getElementById('txt3-part2-3').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('part2-4').offsetTop) {
+        document.getElementById('part2-4').classList.add("show");
+    }
+    else {
+        document.getElementById('part2-4').classList.remove("show");
     }
 })
 
