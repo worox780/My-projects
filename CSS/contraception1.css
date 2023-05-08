@@ -408,21 +408,21 @@
 }
 #titre-intro2-1 {
   opacity: 0;
-  transform: translateY(-20%);
+  transform: translate(5%,-20%);
   transition: all 1s ease-in-out;
 }
 #titre-intro2-1.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(5%, 20px);
 }
 #titre-intro2-2 {
   opacity: 0;
-  transform: translateY(-20%);
+  transform: translate(5%,-20%);
   transition: all 1s ease-in-out;
 }
 #titre-intro2-2.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(5%, 0);
 }
 #video-background {
   position: static;
@@ -453,6 +453,83 @@
 #ph3-part2.higlite {
   color: white;
 }
+
+#paragraphe1-part2-1 {
+  position: relative;
+  text-align: right;
+  font-size: 1.8em;
+  width: 60%;
+  left: 35%;
+  opacity: 0;
+  transform: translate(5%,-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe2-part2-1 {
+  position: relative;
+  text-align: left;
+  font-size: 1.8em;
+  width: 60%;
+  left: 5%;
+  opacity: 0;
+  transform: translate(2%,-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe1-part2-2 {
+  position: relative;
+  text-align: right;
+  font-size: 1.8em;
+  width: 60%;
+  left: 35%;
+  opacity: 0;
+  transform: translate(5%,-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe2-part2-2 {
+  position: relative;
+  text-align: left;
+  font-size: 1.8em;
+  width: 60%;
+  left: 5%;
+  opacity: 0;
+  transform: translate(2%,-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe1-part2-1.show {
+  opacity: 1;
+  transform: translate(5%, 0);
+}
+#paragraphe2-part2-1.show {
+  opacity: 1;
+  transform: translate(2%, 0);
+}
+#paragraphe1-part2-2.show {
+  opacity: 1;
+  transform: translate(5%, 0);
+}
+#paragraphe2-part2-2.show {
+  opacity: 1;
+  transform: translate(2%, 0);
+}
+
+/*
+-----------------------------part3-----------------------------
+*/
+
+#part3 {
+  background-color: rgb(0, 0, 0);
+  height: auto;
+  color: rgb(255, 255, 255);
+}
+#img-intro-part3 {
+  position: relative;
+  background-image: url(https://i.unimedias.fr/2022/02/28/pilule_microdosee.jpg?auto=format,compress&cs=tinysrgb);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vw;
+}
+
+
 /*
 -----------------------------other-----------------------------
 */

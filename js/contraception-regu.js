@@ -88,4 +88,29 @@ window.addEventListener('scroll', function() {
     }else {
         document.getElementById('ph3-part2').classList.remove('higlite')
     }
+
+    if (window.scrollY + window.innerHeight > document.getElementById('paragraphe1-part2-1').offsetTop) {
+        document.getElementById('paragraphe1-part2-1').classList.add("show");
+    }
+    else {
+        document.getElementById('paragraphe1-part2-1').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('paragraphe2-part2-1').offsetTop) {
+        document.getElementById('paragraphe2-part2-1').classList.add("show");
+    }
+    else {
+        document.getElementById('paragraphe2-part2-1').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('paragraphe1-part2-2').offsetTop) {
+        document.getElementById('paragraphe1-part2-2').classList.add("show");
+    }
+    else {
+        document.getElementById('paragraphe1-part2-2').classList.remove("show");
+    }
+    if (window.scrollY + window.innerHeight > document.getElementById('paragraphe2-part2-2').offsetTop) {
+        document.getElementById('paragraphe2-part2-2').classList.add("show");
+    }
+    else {
+        document.getElementById('paragraphe2-part2-2').classList.remove("show");
+    }
 })
