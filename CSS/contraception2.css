@@ -518,6 +518,25 @@
 #img-contra-free {
   width: 100%;
 }
+
+.chiffres-clés {
+  background-color: rgb(0, 81, 255);
+  border: black 2px solid;
+  border-radius: 25px;
+}
+#chiffres-clés-grid1 {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 3%;
+}
+#chiffres-clés-grid2 {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 10%;
+}
+.pourcentage {
+  text-align: center;
+}
 /*
 -----------------------------part3-----------------------------
 */
