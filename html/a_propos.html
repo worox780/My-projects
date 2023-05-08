@@ -4,71 +4,105 @@
     <head>
         <meta charset="utf-8" >
         <title>La contraception</title>
-        <link href="../CSS/a_propos.css" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/Les_sources.css">
         </head>
     
     <body>
-        <div class="empti"></div>
-        <div class="empti"></div>
-        <div class="empti"></div>
-        <div id="frise-container1">
-            <div class="frise">
-              <div class="annee annee1">0</div>
-              <div class="annee annee2">1957</div>
-              <div class="annee annee3">1960</div>
-              <div class="annee annee4">1967</div>
-              <div class="annee annee5">1974</div>
-              <div class="annee annee6">1999</div>
-              <div class="fl1"></div>
+        <header>
+            <div id="menu-phone-all">
+              <button id="button-menu" class="burger" onclick="toggleMenu()"></button>
+              <div class="menu-phone">
+                <nav id="link-menu-phone-storage">menu-phone-all
+                  <a class="link-menu-phone" href="../index.html" style="animation-delay: 0.2s">Acceuil</a>
+                  <a class="link-menu-phone" href="contraception1.html" style="animation-delay: 0.3s">Contraception hormonal régulière</a>
+                  <a class="link-menu-phone" href="contraception2.html" style="animation-delay: 0.4s">Contraception hormonal d'urgence</a>
+                  <a class="link-menu-phone" href="Les_sources.html" style="animation-delay: 0.5s">Sources</a>
+                  <a class="link-menu-phone" href="a_propos.html" style="animation-delay: 0.6s">A propos</a>
+                  <a class="link-menu-phone" href="Contacte.html" style="animation-delay: 0.7s">Contacte</a>
+                </nav>
+              </div>
+              <script type="text/javascript">
+                const toggleMenu = () => document.body.classList.toggle("open");
+              </script>
             </div>
-          </div>
-          <div class="empti"></div>
-          <div id="frise-container2">
-            <div class="frise">
-              <div class="annee annee1">0</div>
-              <div class="annee annee2">1957</div>
-              <div class="annee annee3">1960</div>
-              <div class="annee annee4">1967</div>
-              <div class="annee annee5">1974</div>
-              <div class="annee annee6">1999</div>
-              <div class="fl2"></div>
+            <div id="menu-pc">
+              <nav id="navbar-pc">
+                  <div class="dropdowns">
+                      <div class="dropdown">
+                          <div id="Acceuil" >
+                              <a href="../index.html" class="button">Acceuil <img id="img-plus1" src="../img/logo/chevron.svg" /></a>
+                              <div class="dropdown-menu">
+                                  <a href="../index.html#Qu-est-ce-que-la-contraception" class="button-in">Qu'est ce que la contraception</a>
+                                  <a href="../index.html#La-contraception-hormonale-dans-le-monde" class="button-in">La contraception hormonale dans le monde</a>
+                                  <a href="../index.html#L-histoire-de-la-contracepetion-en-France" class="button-in">L'histoire de la contracepetion en France</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                          <div id="contracepetion">
+                              <a href="contraception1.html" class="button">Contraception hormonal régulière <img id="img-plus2" src="../img/logo/chevron.svg" /></a>
+                              <div class="dropdown-menu">
+                                    <a href="contraception1.html#Qu-est-ce-que-la-contraception-hormonale-régulière" class="button-in">Qu'est ce que la contraception hormonale régulière</a>
+                                    <a href="contraception1.html#Quel-type-de-pilule-existe-t-il" class="button-in">Quel type de pilule</a>
+                                    <a href="contraception1.html#Mode-d-emploi" class="button-in">Mode d'emploi</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                        <div id="Contracetion-general" >
+                            <a href="contraception2.html" class="button">Contraception hormonal d'urgence <img id="img-plus1" src="../img/logo/chevron.svg" /></a>
+                            <div class="dropdown-menu">
+                                <a href="contraception2.html#Qu-est-ce-que-la-contraception-hormonale-d-urgence" class="button-in">Qu'est ce que la contraception hormonale d'urgence</a>
+                                <a href="contraception2.html#Type-de-contraception-d-urgence" class="button-in">Type de contraception d'urgence</a>
+                                <a href="contraception2.html#ancre3" class="button-in">Ancre3</a>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="barre">
+                      </div>
+                      <div>
+                          <div id="sources" class="button">
+                              <a href="Les_sources.html">Sources</a>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                          <div id="propos">
+                              <a href="a_propos.html" class="button">A propos <img id="img-plus5" src="../img/logo/chevron.svg" /></a>
+                              <div div="dropdow2" class="dropdown-menu">
+                                  <a href="a_propos.html#Arnav-Surana" class="button-in">Arnav Surana</a>
+                                  <a href="a_propos.html#Louis-Verite" class="button-in">Louis Verite</a>
+                                  <a href="a_propos.html#ancre1" class="button-in">Ancere 3</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="barre">
+                      </div>
+                      <div class="dropdown">
+                          <div id="Contact">
+                              <a href="Contacte.html" class="button">Contacte <img id="img-plus6" src="../img/logo/chevron.svg" /></a>
+                              <div div="dropdown3" class="dropdown-menu">
+                                  <a href="Contacte.html#email" class="button-in">Email</a>
+                                  <a href="Contacte.html#telephone" class="button-in">Telephone</a>
+                                  <a href="Contacte.html#Adresse" class="button-in">Adresse</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </nav>
             </div>
-          </div>
-          <div class="empti"></div>
-          <div id="frise-container3">
-            <div class="frise">
-              <div class="annee annee1">0</div>
-              <div class="annee annee2">1957</div>
-              <div class="annee annee3">1960</div>
-              <div class="annee annee4">1967</div>
-              <div class="annee annee5">1974</div>
-              <div class="annee annee6">1999</div>
-              <div class="fl3"></div>
-            </div>
-          </div>
-          <div class="empti"></div>
-          <div id="frise-container4">
-            <div class="frise">
-              <div class="annee annee1">0</div>
-              <div class="annee annee2">1957</div>
-              <div class="annee annee3">1960</div>
-              <div class="annee annee4">1967</div>
-              <div class="annee annee5">1974</div>
-              <div class="annee annee6">1999</div>
-              <div class="fl4"></div>
-            </div>
-          </div>
-          <div class="empti"></div>
-          <div id="frise-container5">
-            <div class="frise">
-              <div class="annee annee1">0</div>
-              <div class="annee annee2">1957</div>
-              <div class="annee annee3">1960</div>
-              <div class="annee annee4">1967</div>
-              <div class="annee annee5">1974</div>
-              <div class="annee annee6">1999</div>
-              <div class="fl5"></div>
-            </div>
-          </div>
-        <script src="../js/a_propos.js"></script>
+        </header>
+          <main>
+              <H1>A propos<br>En cours de développement</H1>
+          </main>
+            
+          <footer>
+                <p>Copyright © 2023 Mon site web</p>
+          </footer>
+          <script src="../js/a_propos.js"></script>
     </body>
