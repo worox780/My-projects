@@ -281,6 +281,44 @@
 
 
 /*
+-----------------------------part1-----------------------------
+*/
+
+#part1 {
+  background-color: white;
+}
+#img-Arnav {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+#img-Louis {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+#part2 {
+  font-size: 2em;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: 500px 500px;
+  gap: 2%;
+  left: 2%;
+  position: relative;
+  width: 100%;
+}
+#part3 {
+  position: relative;
+  top: 100px;
+  width: 100%;
+}
+#part4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+/*
 -----------------------------other-----------------------------
 */
 
@@ -303,3 +341,6 @@ footer {
   .empti-before-part-big {
     height: 500px;
   }
+p {
+  text-align: justify;
+}

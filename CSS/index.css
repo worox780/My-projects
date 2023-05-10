@@ -1058,3 +1058,10 @@ h2 {
 /*
 Bandeau qui se déplace sur la gauche
 */
+
+p {
+  text-align: justify;
+}
+body {
+  padding-right: 20px;
+}

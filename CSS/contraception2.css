@@ -299,8 +299,8 @@
 }
 #Big-title-intro {
   position: relative;
-
   width: 90%;
+  top: 0px;
   opacity: 0;
   left: 50px;
   text-align: center;
@@ -788,4 +788,7 @@ table {
 }
 td, th {
   border: 1px solid rgb(255, 255, 255);
+}
+p {
+  text-align: justify;
 }

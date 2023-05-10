@@ -762,3 +762,6 @@ footer {
   .empti-before-part-big {
     height: 500px;
   }
+  p {
+    text-align: justify;
+  }
