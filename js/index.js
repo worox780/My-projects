@@ -12,7 +12,7 @@ const data = [
     {id: 7, txt: "La loi Neuwirth est une loi française adoptée par l'Assemblée nationale et le Sénat le 19 décembre 1967 qui autorise l’usage des contraceptifs, et notamment la contraception orale."},
     {id: 8, txt: "La loi du 17 janvier 1975 relative à l'interruption volontaire de grossesse, dite loi Veil, est une loi encadrant une dépénalisation de l'avortement en France."},
     {id: 9, txt: "L’avortement se définit comme l'interruption du processus de gestation"},
-    {id: 10, txt: "Mange ta mort"},
+    {id: 10, txt: "Elle est composée principalement de lévonorgestrel (généralement un comprimé de 1,5 mg). Elle peut être utilisée jusqu’à 3 jours après le rapport et est 50 fois plus concentrée qu’une pilule microdosée"},
     {id: 11, txt: "L’avortement se définit comme l'interruption du processus de gestation"}
 ]
 
@@ -22,7 +22,7 @@ tooltips.forEach((tooltip) => {
 
     tooltipID = e.target.getAttribute('data-id');
     tooltipContainer.classList.add("fade-in");
-    tooltipContainer.style.left = `${e.pageX}px`;
+    tooltipContainer.style.left = `${e.pageX - 212.5}px`;
     tooltipContainer.style.top = `${e.pageY}px`;
     tooltipContainer.innerText = data[tooltipID - 1].txt;
 

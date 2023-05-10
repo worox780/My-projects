@@ -422,7 +422,7 @@
 }
 #texte-intro-part2 {
   font-size: 2em;
-  text-align: center;
+  text-align: justify;
 }
 #titre-intro2-1 {
   opacity: 0;
@@ -467,7 +467,7 @@
 
 #paragraphe1-part2-1 {
   position: relative;
-  text-align: right;
+  text-align: justify;
   font-size: 1.8em;
   width: 60%;
   left: 35%;
@@ -477,7 +477,7 @@
 }
 #paragraphe2-part2-1 {
   position: relative;
-  text-align: left;
+  text-align: justify;
   font-size: 1.8em;
   width: 60%;
   left: 5%;
@@ -487,7 +487,7 @@
 }
 #paragraphe1-part2-2 {
   position: relative;
-  text-align: right;
+  text-align: justify;
   font-size: 1.8em;
   width: 60%;
   left: 35%;
@@ -497,7 +497,7 @@
 }
 #paragraphe2-part2-2 {
   position: relative;
-  text-align: left;
+  text-align: justify;
   font-size: 1.8em;
   width: 60%;
   left: 5%;
@@ -522,6 +522,19 @@
   transform: translate(2%, 0);
 }
 
+.chiffres-clés {
+  background-color: rgb(0, 81, 255);
+  border: black 2px solid;
+  border-radius: 25px;
+}
+.chiffres-clés-grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 10%;
+}
+.pourcentage {
+  text-align: center;
+}
 /*
 -----------------------------part3-----------------------------
 */
@@ -538,6 +551,195 @@
   background-position: center;
   background-attachment: fixed;
   height: 100vw;
+}
+#titre-intro2-3 {
+  position: relative;
+  opacity: 0;
+  top: 0px;
+  text-align: center;
+  transition: opacity 1s ease-in-out, top 1s ease-in-out;
+}
+#titre-intro2-3.show {
+  opacity: 1;
+  top: -50px;
+}
+#texte-intro-part3 {
+  color: rgb(175, 175, 175);
+  font-size: 2em;
+  text-align: center;
+}
+#ph1-part3 {
+  transition: color 0.5s ease-in-out;
+}
+#ph2-part3 {
+  transition: color 0.5s ease-in-out;
+}
+#ph1-part3.higlite {
+  color: white;
+}
+#ph2-part3.higlite {
+  color: white;
+}
+#texte-intro-part31 {
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  text-align: center;
+}
+.paragraphe-grid {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 2%;
+  left: 1%;
+  right: 1%;
+}
+#paragraphe1-part3 {
+  position: relative;
+  text-align: justify;
+  font-size: 1.8em;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe2-part3 {
+  position: relative;
+  text-align: justify;
+  font-size: 1.8em;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe1-part3.show {
+  opacity: 1;
+  transform: translate(0);
+}
+#paragraphe2-part3.show {
+  opacity: 1;
+  transform: translate(0);
+}
+#img-part3-maux-de-tête {
+  width: 98%;
+  left: 1%;
+}
+#texte-outro-part3 {
+  color: rgb(175, 175, 175);
+  font-size: 2em;
+  text-align: center;
+  transition: color 0.5s ease-in-out;
+}
+#texte-outro-part3.higlite {
+  color: white;
+}
+
+
+#img-intro-part4 {
+  position: relative;
+  background-image: url(https://www.qare.fr/wp-content/uploads/2020/08/GettyImages-1157747723-1.jpg?x99757);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vw;
+}
+#titre-intro-part4 {
+  position: relative;
+  opacity: 0;
+  top: 0px;
+  text-align: center;
+  transition: opacity 1s ease-in-out, top 1s ease-in-out;
+}
+#titre-intro-part4.show {
+  opacity: 1;
+  top: -50px;
+}
+#paragraphe1-part4 {
+  position: relative;
+  text-align: center;
+  font-size: 1.8em;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#paragraphe1-part4.show {
+  opacity: 1;
+  transform: translate(0);
+}
+#cycle-28 {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#cycle-28.show {
+  opacity: 1;
+  transform: translate(0);
+}
+#cycle-21 {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: all 1s ease-in-out;
+}
+#cycle-21.show {
+  opacity: 1;
+  transform: translate(0);
+}
+.img {
+  width: 100%;
+}
+
+
+
+/*
+-----------------------------Tooltip-----------------------------
+*/
+.tooltip {
+  display: inline-block;
+  position: relative;
+  color: rgb(0, 175, 175);
+  text-decoration: underline;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.tooltip:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.tooltip-container {
+  width: 425px;
+  min-height: 200px;
+  height: auto;
+  padding: 15px;
+  font-size: 25px;
+  background: white;
+  box-shadow: 0 30px 90px -20px rgba(0,0,0,0.3);
+  position: absolute;
+  z-index: 100;
+  display: none;
+  opacity: 0;
+}
+
+.fade-in {
+  display: block;
+  animation: fade 0.2s linear forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
