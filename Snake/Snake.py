@@ -87,7 +87,7 @@ class Snake:
             self.map_gene[self.position_apple[0]][self.position_apple[1]] = "o"
     #print the plate. It can see if you win with head position or body size.
     def __Print_plate__(self) -> None:
-        #os.system('cls')
+        os.system('cls')
         self.tour_count += 1
         for x in range(self.plate_size):
             for y in range(self.plate_size):

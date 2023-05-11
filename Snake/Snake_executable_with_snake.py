@@ -1,8 +1,8 @@
-import calculette
+import Snake
 from random import randint
 
 taille = int(input("taille de la carte \n"))
-game = calculette.Game(taille, [randint(1, taille), randint(1, taille)])
+game = Snake.Snake(taille, [randint(1, taille), randint(1, taille)])
 play = game.play
 print(game.position_apple)
 while play:
