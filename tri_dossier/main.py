@@ -1,14 +1,14 @@
 from tkinter import *
 import os
 from time import sleep
-class end:
+class end: #end page
     def __init__(self) -> None:
         self.root = Tk()
         self.root.resizable(False, False)
         Label(self.root, text="Le programmme vient de finir \nson execution, merci de relancer l'application \npour pouvoir effectuer une nouvelle procédure", height=5, width=50).pack()
-        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing) #calling func on_closing when page close
         self.root.mainloop()
-    def on_closing(self):
+    def on_closing(self) -> None: #loop from the end page to the main page
         self.root.destroy()
         main()
 
@@ -20,38 +20,38 @@ class Page_manager:
 
         self.m = Frame(self.root)
         self.m.grid()
-        self.btn = Button(self.root, command=self.get_entries)
+        self.btn = Button(self.root, command=self.get_entries, text="démarer le processus")
         self.btn.grid()
 
         self.txt = ["chemin de départ", "chemin d'arrivé", "extension"]
-        for y in range(3):
+        for y in range(3): #title table generation
             self.l = Label(self.m, width=20, text=self.txt[y])
             self.l.grid(row=0, column=y)
 
-        for y in range(rows):
-            row_entries = []  # Liste pour stocker les entrées d'une ligne
+        for y in range(rows): #table generation
+            row_entries = []  #Array entry
             for x in range(3):
-                self.var = StringVar()
+                self.var = StringVar() 
                 self.e = Entry(self.m, width=20, textvariable=self.var)
                 self.e.grid(row=y+1, column=x)
-                row_entries.append(self.var)  # Ajouter la variable de l'entrée à la liste
-            self.entries.append(row_entries)  # Ajouter la liste des entrées de la ligne à la liste principale
+                row_entries.append(self.var)  #append entry var in a tiny array
+            self.entries.append(row_entries)  #append all entry var of a row in an array
         self.root.mainloop()
-    def get_entries(self):
+    def get_entries(self): #collect all information of the entry, call when button btn pressed
         values = []
         for row_entries in self.entries:
             row_values = []
             for entry_var in row_entries:
-                row_values.append(entry_var.get())  # Récupérer la valeur de chaque entrée
+                row_values.append(entry_var.get())  #collect information of any rows
             values.append(row_values)
         self.exe(values)
-    def exe(self, values):
+    def exe(self, values): #function of iteration
         #self.info_transert = Label(self.root, text="transfert 1, fichiers transferés 1/1")
         #self.info_transert.grid()
         for val in range(len(values)):
-            self.ite(values[val], val)
-        self.destroyed()
-    def ite(self,values, nb_transfert):
+            self.iteration(values[val])
+        self.destroyed() #call the next page after the process
+    def iteration(self,values): #process
         can = True
         n_fil = values[0]
         dir = values[1]
