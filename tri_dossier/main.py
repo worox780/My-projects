@@ -1,97 +1,51 @@
 from tkinter import *
 import os
 from time import sleep
-class end: #end page
-    def __init__(self) -> None:
-        self.root = Tk()
-        self.root.resizable(False, False)
-        Label(self.root, text="Le programmme vient de finir \nson execution, merci de relancer l'application \npour pouvoir effectuer une nouvelle procédure", height=5, width=50).pack()
-        self.root.protocol("WM_DELETE_WINDOW", self.on_closing) #calling func on_closing when page close
-        self.root.mainloop()
-    def on_closing(self) -> None: #loop from the end page to the main page
-        self.root.destroy()
-        main()
-
-class Page_manager:
-    def __init__(self, rows) -> None:
-        self.root = Tk()
-        self.root.resizable(False, False)
-        self.entries = []  # Liste pour stocker les entrées
-
-        self.m = Frame(self.root)
-        self.m.grid()
-        self.btn = Button(self.root, command=self.get_entries, text="démarer le processus")
-        self.btn.grid()
-
-        self.txt = ["chemin de départ", "chemin d'arrivé", "extension"]
-        for y in range(3): #title table generation
-            self.l = Label(self.m, width=20, text=self.txt[y])
-            self.l.grid(row=0, column=y)
-
-        for y in range(rows): #table generation
-            row_entries = []  #Array entry
-            for x in range(3):
-                self.var = StringVar() 
-                self.e = Entry(self.m, width=20, textvariable=self.var)
-                self.e.grid(row=y+1, column=x)
-                row_entries.append(self.var)  #append entry var in a tiny array
-            self.entries.append(row_entries)  #append all entry var of a row in an array
-        self.root.mainloop()
-    def get_entries(self): #collect all information of the entry, call when button btn pressed
-        values = []
-        for row_entries in self.entries:
-            row_values = []
-            for entry_var in row_entries:
-                row_values.append(entry_var.get())  #collect information of any rows
-            values.append(row_values)
-        self.exe(values)
-    def exe(self, values): #function of iteration
-        #self.info_transert = Label(self.root, text="transfert 1, fichiers transferés 1/1")
-        #self.info_transert.grid()
-        for val in range(len(values)):
-            self.iteration(values[val])
-        self.destroyed() #call the next page after the process
-    def iteration(self,values): #process
-        can = True
-        n_fil = values[0]
-        dir = values[1]
-        ext = values[2]
-        if not os.path.exists(n_fil):
-            can = False
-        if not os.path.exists(dir):
-            can = False
-        if ext not in ['.txt', '.docx', '.xlsx', '.pptx', '.pdf', '.jpg', '.png', '.gif', '.mp3', '.mp4', '.avi', '.zip', '.rar', '.py', '.html', '.css', '.js', '.cpp', '.java', '.php', '.odt']:
-            can = False
-        if can:
-            for i in os.listdir(n_fil):
-                extension = i.split('.')[-1]
-                if f".{extension}" == ext:
-                    sleep(0.1)
-                    #self.info_transert.config(text=f"transfert {nb_transfert}, fichier {i}/{len(os.listdir(n_fil))} dans le dossier")
-                    os.rename(f'{n_fil}\{i}', f'{dir}\{i}')
-    def destroyed(self):
-        self.root.destroy()
-        end()
+import manager_ext_fils
         
 
-class main:
+class Main:
     def __init__(self) -> None:
         self.main = Tk()
+        self.langage = ["French", "English"]
+        Label(self.main, text="choose your langage").pack()
+        self.var_listbox = StringVar()
+        self.listbox = Listbox(self.main, selectmode=SINGLE, listvariable=self.var_listbox)
+        self.listbox.insert(END, "French")
+        self.listbox.insert(END, "English")
+        self.listbox.pack()
+        self.listbox.bind('<<ListboxSelect>>', self.on_select)
+        Button(self.main, text="accept", command=self.start).pack()
+        self.main.mainloop()
+    def on_select(self, event):
+        self.var_listbox = self.listbox.get(self.listbox.curselection())
+    def start(self):
+        self.main.destroy()
+        print(self.langage.index(self.var_listbox))
+        Page(self.langage.index(self.var_listbox))
+        
+
+class Page:
+    def __init__(self, langage=0) -> None:
+        self.main = Tk()
+        self.sentence = [["Bienvenue dans le logiciel de tri de fichier", "Selectionner le nombre de transfert(s)", "Valider"], ["Welcome on your fils manager", "Select the number of iteration(s)", "Validate"]]
+        self.langage = langage
         self.count = 0
         self.main.resizable(False, False)
-        self.title_head = Label(self.main, text="Bienvenue dans le logiciel de tri de fichier ", height=4)
+        self.title_head = Label(self.main, text=self.sentence[self.langage][0], height=4)
         self.title_head.grid()
-        self.info_label = Label(self.main, text="Selectionner le nombre de transfert(s)")
+        self.info_label = Label(self.main, text=self.sentence[self.langage][1])
         self.info_label.grid()
         self.spin_var = IntVar()
         self.nb_it_spin = Spinbox(self.main, from_=1, to=10, textvariable=self.spin_var)
         self.nb_it_spin.grid()
 
-        self.btn_check = Button(self.main, text="Valider", command=self.manager_fils)
+        self.btn_check = Button(self.main, text=self.sentence[self.langage][2], command=self.manager_fils)
         self.btn_check.grid(row=3)
         self.main.mainloop()
     def manager_fils(self):
         self.main.destroy()
-        Page_manager(self.spin_var.get())
+        print(self.langage)
+        manager_ext_fils.Page_manager(self.spin_var.get(), self.langage)
 
-main()
+Main()
