@@ -5,6 +5,7 @@ from end import end
 class Page_manager:
     def __init__(self, rows, langage:int) -> None:
         self.root = Tk()
+        self.root.geometry("450x100+50+50")
         self.sentence = [["démarer le processus", "chemin de départ", "chemin d'arrivé", "extension"], ["Start the process", "path from", "path to", "extension"]]
         self.langage = langage
         self.root.resizable(False, False)
@@ -61,4 +62,4 @@ class Page_manager:
                     os.rename(f'{n_fil}\{i}', f'{dir}\{i}')
     def destroyed(self):
         self.root.destroy()
-        end()
+        end(self.langage)
