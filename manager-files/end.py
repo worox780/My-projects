@@ -1,6 +1,4 @@
 from tkinter import *
-import os
-from time import sleep
 class end: #end page
     def __init__(self) -> None:
         self.root = Tk()

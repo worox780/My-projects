@@ -1,7 +1,5 @@
 from tkinter import *
-import os
-from time import sleep
-import manager_ext_fils
+import manager_ext_files
         
 
 class Main:
@@ -21,7 +19,6 @@ class Main:
         self.var_listbox = self.listbox.get(self.listbox.curselection())
     def start(self):
         self.main.destroy()
-        print(self.langage.index(self.var_listbox))
         Page(self.langage.index(self.var_listbox))
         
 
@@ -45,7 +42,6 @@ class Page:
         self.main.mainloop()
     def manager_fils(self):
         self.main.destroy()
-        print(self.langage)
-        manager_ext_fils.Page_manager(self.spin_var.get(), self.langage)
+        manager_ext_files.Page_manager(self.spin_var.get(), self.langage)
 
 Main()

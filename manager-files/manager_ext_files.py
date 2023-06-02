@@ -1,12 +1,11 @@
 from tkinter import *
 import os
-from time import sleep
 from end import end
 
 class Page_manager:
     def __init__(self, rows, langage:int) -> None:
         self.root = Tk()
-        self.sentence = [["démarer le processus", "chemin de départ", "chemin d'arrivé", "extension"], ["Start the process", "path from", "path to", "extension", "print", "lol"]]
+        self.sentence = [["démarer le processus", "chemin de départ", "chemin d'arrivé", "extension"], ["Start the process", "path from", "path to", "extension"]]
         self.langage = langage
         self.root.resizable(False, False)
         self.entries = []  # Liste pour stocker les entrées
@@ -22,7 +21,6 @@ class Page_manager:
 
         for y in range(rows): #table generation
             row_entries = []  #Array entry
-            print("ok")
             for x in range(3):
                 self.var = StringVar() 
                 self.e = Entry(self.m, width=20, textvariable=self.var)
@@ -59,7 +57,6 @@ class Page_manager:
             for i in os.listdir(n_fil):
                 extension = i.split('.')[-1]
                 if f".{extension}" == ext:
-                    sleep(0.1)
                     #self.info_transert.config(text=f"transfert {nb_transfert}, fichier {i}/{len(os.listdir(n_fil))} dans le dossier")
                     os.rename(f'{n_fil}\{i}', f'{dir}\{i}')
     def destroyed(self):
